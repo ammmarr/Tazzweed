@@ -1,7 +1,6 @@
-import React from "react";
-import style from "./index.module.scss";
 import img from "../../assets/images/whoweare_img.webp";
 import WhatsappButton from "../whatsappButton/WhatsappButton";
+import style from "./index.module.scss";
 const WhoWeAreSection = () => {
   return (
     <div className={style.container}>

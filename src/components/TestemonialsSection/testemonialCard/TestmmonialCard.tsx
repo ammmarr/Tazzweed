@@ -1,6 +1,5 @@
-import React from "react";
-import style from "./index.module.scss";
 import userImg from "../../../assets/images/userIMg.jpeg";
+import style from "./index.module.scss";
 const TestmmonialCard = () => {
   return (
     <div className={style.container}>

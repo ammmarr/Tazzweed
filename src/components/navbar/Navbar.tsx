@@ -1,8 +1,7 @@
-import React from "react";
-import style from "./index.module.scss";
-import { mainRoutes, socialMediaLinks } from "../../pages/home/routes";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/tazzweed_logo (1).png";
+import { mainRoutes, socialMediaLinks } from "../../pages/home/routes";
+import style from "./index.module.scss";
 import MobNav from "./mobnav/MobNav";
 const Navbar = () => {
   return (

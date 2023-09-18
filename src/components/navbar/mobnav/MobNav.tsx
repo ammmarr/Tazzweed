@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import style from "./index.module.scss";
 import Hamburger from "hamburger-react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { mainRoutes } from "../../../pages/home/routes";
+import style from "./index.module.scss";
 const MobNav = () => {
   const [open, setIsOpen] = useState(false);
   const [dropDown, setDropDown] = useState(false);
