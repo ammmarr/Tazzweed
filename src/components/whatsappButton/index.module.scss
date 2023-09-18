@@ -1,0 +1,25 @@
+.container {
+  width: fit-content;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-weight: 200;
+  min-width: 100px;
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+  white-space: nowrap;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  &:hover {
+    transform: scale(1.07);
+    background-color: rgb(27, 27, 27);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+}

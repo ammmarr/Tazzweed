@@ -1,0 +1,151 @@
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  .howItWorksContainer {
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 50vh;
+    z-index: 2;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid black;
+    .howItWorksWrapper {
+      width: 95%;
+      z-index: 2;
+      background-color: white;
+      border: 1px solid black;
+      border-radius: 0 0 60px 0;
+      transform: translateY(-50%);
+      text-align: center;
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      overflow: hidden;
+      padding: 5% 3% 3% 3%;
+      gap: 10%;
+      .slider {
+        position: relative;
+        background-color: orange;
+        flex: 1;
+        // width: 40vw;
+        height: 40vh;
+        h3 {
+          width: 100%;
+          height: 100%;
+        }
+
+        .testt {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 40vh !important;
+        }
+        .sliderItem {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .textSection {
+        flex: 1;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+        h1 {
+          color: #f0c40b;
+          font-size: 80px;
+          text-align: start;
+          white-space: nowrap;
+          width: 100%;
+          margin: 0 0 10px 0;
+        }
+        p {
+          color: #677c93;
+          font-size: 25px;
+          text-align: start;
+        }
+      }
+    }
+  }
+  .buttonContainer {
+    margin: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+  h1 {
+    font-size: 70px;
+    width: 100%;
+    word-spacing: -10px;
+    transform: translateY(-30%);
+  }
+  .mainTextSection {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 5%;
+    .collaboratedBrandSlider {
+      width: 100%;
+      height: 40vh;
+      margin: 10vh 0 20vh 0;
+      .sliderItemContainer {
+        width: 30vw;
+        height: 40vh;
+        display: flex;
+        justify-content: center !important;
+        align-items: center !important;
+        padding: 10% !important;
+        h3 {
+          width: 100%;
+          background-color: rgba(108, 63, 49, 0.632);
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .howItWorksWrapper {
+    flex-direction: column !important;
+    transform: translateY(-30%) !important;
+    align-items: center !important;
+    gap: 40px !important;
+    .textSection {
+      h1 {
+        font-size: 50px !important;
+        text-align: center;
+      }
+      p {
+        font-size: 30px !important;
+        text-align: center;
+      }
+    }
+  }
+  .buttonContainer {
+    justify-content: center;
+  }
+  .slider {
+    width: 90% !important;
+    height: 20vh !important;
+  }
+  .testt {
+    position: static !important;
+  }
+}

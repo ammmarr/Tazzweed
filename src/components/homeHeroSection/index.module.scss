@@ -1,0 +1,88 @@
+.heroSectionContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  .textContainer {
+    width: fit-content;
+    height: fit-content;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    .mainHeading {
+      font-weight: 700;
+      font-size: 90px;
+      line-height: 80px;
+      word-wrap: break-word;
+      span {
+        color: #f0c40b;
+      }
+    }
+    .p {
+      font-weight: 400;
+      font-size: 34px;
+      line-height: 34px;
+      font-style: italic;
+      width: 55%;
+      margin: 2% 0;
+    }
+    .googleReviews {
+      display: flex;
+      align-items: center;
+
+      span {
+        font-size: 20px;
+        width: fit-content;
+        color: grey;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      img {
+        width: 100px;
+        margin: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .textContainer {
+    width: 100%;
+  }
+  .mainHeading {
+    font-size: 70px !important;
+    line-height: 65px;
+  }
+  .p {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .textContainer {
+    width: 100%;
+  }
+  .mainHeading {
+    font-size: 40px !important;
+    line-height: 40px !important;
+  }
+  .p {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  .textContainer {
+    width: 100%;
+  }
+  .mainHeading {
+    font-size: 30px !important;
+    line-height: 35px !important;
+  }
+  .p {
+    font-size: 20px !important;
+    line-height: 20px !important;
+    width: 100% !important;
+  }
+}
