@@ -7,8 +7,8 @@ import style from "./index.module.scss";
 import MobNav from "./mobnav/MobNav";
 
 type NavBarProps = {
-  bgColor: string;
-  color: string;
+  bgColor?: string;
+  color?: string;
 };
 const Navbar = (props: NavBarProps) => {
   const { bgColor, color } = props;
