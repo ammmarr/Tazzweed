@@ -1,18 +1,35 @@
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/tazzweed_logo (1).png";
+import logoBlack from "../../assets/images/tazzweed_logo (1).png";
+import logoWhite from "../../assets/images/logo_white.png";
+
 import { mainRoutes, socialMediaLinks } from "../../pages/home/routes";
 import style from "./index.module.scss";
 import MobNav from "./mobnav/MobNav";
-const Navbar = () => {
+
+type NavBarProps = {
+  bgColor: string;
+  color: string;
+};
+const Navbar = (props: NavBarProps) => {
+  const { bgColor, color } = props;
   return (
-    <div className={style.container}>
+    <div
+      className={style.container}
+      style={{ backgroundColor: bgColor, color: color }}
+    >
       <div className={style.logo}>
-        <img src={logo} />
+        {bgColor == "black" && <img src={logoWhite} />}
+        <img src={logoBlack} />
       </div>
       <div className={style.mainLinks}>
         {mainRoutes.map((each, i) => (
           <>
-            <Link to={each.href} className={style.link} key={i}>
+            <Link
+              to={each.href}
+              className={style.link}
+              style={{ color: color }}
+              key={i}
+            >
               {each.name}
             </Link>
           </>
@@ -23,6 +40,7 @@ const Navbar = () => {
           <Link
             to={each.href}
             className={`${style.link} ${style.socialMediaLink}`}
+            style={{ color: color }}
             key={i}
           >
             {each.icon}

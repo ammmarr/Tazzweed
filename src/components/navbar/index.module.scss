@@ -43,7 +43,7 @@
     align-items: center;
     transition: all 0.3s ease-in;
     &:hover {
-      color: #e5c013;
+      color: #e5c013 !important;
       .dropDownContainer {
         visibility: visible;
         transform: translateY(0);

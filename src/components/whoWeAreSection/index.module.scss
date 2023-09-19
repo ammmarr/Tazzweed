@@ -8,6 +8,7 @@
   padding-top: 10%;
   gap: 15%;
   background-color: #fafafa;
+  position: relative;
   .textContainer {
     flex: 1;
     h2 {
@@ -22,6 +23,16 @@
   }
   .imgContainer {
     flex: 1;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 30vh;
+    background: linear-gradient(to top, #fafafa, #fff);
+    transform: translateY(-100%);
   }
 }
 
