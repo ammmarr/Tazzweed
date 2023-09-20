@@ -1,0 +1,26 @@
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fafafa;
+  span {
+    color: #f0c40b;
+  }
+  h1 {
+    margin: 15vh 0 0 0;
+  }
+  .postsContainer {
+    margin-top: 10vh;
+    h2 {
+      font-size: 40px;
+    }
+    width: 80%;
+    flex-direction: column;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

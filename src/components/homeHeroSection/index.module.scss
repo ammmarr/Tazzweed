@@ -3,7 +3,9 @@
   height: 100vh;
   display: flex;
   align-items: center;
-
+  h1 {
+    text-align: start;
+  }
   .textContainer {
     width: fit-content;
     height: fit-content;

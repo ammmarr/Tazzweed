@@ -6,6 +6,7 @@ import {
 } from "@mui/icons-material";
 import Home from "./Home";
 import Contact from "../contactUs/Contact.tsx";
+import Blog from "../blog/Blog.tsx";
 
 export const mainRoutes = [
   {
@@ -21,7 +22,7 @@ export const mainRoutes = [
   {
     name: "News",
     href: "/news",
-    element: <Contact />,
+    element: <Blog />,
   },
   {
     name: "Contact",
