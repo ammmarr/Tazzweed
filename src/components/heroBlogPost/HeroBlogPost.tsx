@@ -1,7 +1,6 @@
-import React from "react";
-import style from "./index.module.scss";
-import demo from "../../assets/images/demo1.jpg";
 import { Link } from "react-router-dom";
+import demo from "../../assets/images/demo1.jpg";
+import style from "./index.module.scss";
 const HeroBlogPost = () => {
   return (
     <div className={style.container}>

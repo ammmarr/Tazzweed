@@ -1,9 +1,8 @@
-import React from "react";
+import BlogPostCard from "../../components/blogPostCard/BlogPostCard";
+import Footer from "../../components/footer/Footer";
 import HeroBlogPost from "../../components/heroBlogPost/HeroBlogPost";
 import Navbar from "../../components/navbar/Navbar";
-import Footer from "../../components/footer/Footer";
 import style from "./index.module.scss";
-import BlogPostCard from "../../components/blogPostCard/BlogPostCard";
 const Blog = () => {
   return (
     <>
