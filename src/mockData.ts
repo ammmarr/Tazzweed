@@ -210,4 +210,4 @@ const mockData = [
       "Product Category": "Basic"
     }]
 
-    export mockData
+    export default mockData
