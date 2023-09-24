@@ -13,13 +13,17 @@
   white-space: nowrap;
   outline: none;
   background-color: black;
-  color: white;
+  color: white !important;
   cursor: pointer;
   border: none;
   transition: all 0.3s ease;
+  span {
+    color: white !important;
+  }
   &:hover {
     transform: scale(1.07);
     background-color: rgb(27, 27, 27);
+    color: #f0c40b;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
 }

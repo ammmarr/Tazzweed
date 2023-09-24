@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import demo from "../../assets/images/demo1.jpg";
 import style from "./index.module.scss";
-const BlogPostCard = () => {
-  const blog = 1;
+import WhatsappButton from "../whatsappButton/WhatsappButton";
+const HeroProductCard = () => {
   return (
     <div className={style.container}>
       <div className={style.imageContainer}>
@@ -18,14 +18,11 @@ const BlogPostCard = () => {
           repellendus rerum.
         </p>
         <div className={style.buttonAndContainer}>
-          <Link className="button" to={`/blog/${blog}`}>
-            Read More ...
-          </Link>
-          <span>july 17 3 min read</span>
+          <WhatsappButton />
         </div>
       </div>
     </div>
   );
 };
 
-export default BlogPostCard;
+export default HeroProductCard;
