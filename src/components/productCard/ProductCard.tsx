@@ -16,8 +16,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
           <img src={demo} />
         </div>
         <div className={style.textSection}>
-          <h1 className={style.h1}>{data.title}</h1>
-          <p className={style.p}>{data.body}</p>
+          <h1 className={style.h1}>{data.brand}</h1>
+          <p className={style.p}>{data.name}</p>
           <div className={style.buttonContainer}>
             <Link
               className="button"

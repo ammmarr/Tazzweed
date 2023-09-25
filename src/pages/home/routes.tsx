@@ -52,7 +52,7 @@ export const allRoutes = [
   {
     name: "blog",
     href: "/blog/:id",
-    element: <Contact />,
+    element: <Blog />,
   },
   {
     name: "product",

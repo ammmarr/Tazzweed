@@ -18,12 +18,17 @@
   border: none;
   transition: all 0.3s ease;
   span {
+    transition: all 0.3s ease;
+
     color: white !important;
   }
   &:hover {
-    transform: scale(1.07);
+    transform: scale(1.04);
     background-color: rgb(27, 27, 27);
-    color: #f0c40b;
+    color: #f0c40b !important;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    span {
+      color: #f0c40b !important;
+    }
   }
 }
