@@ -1,8 +1,9 @@
 import BlogPostCard from "../../components/blogPostCard/BlogPostCard";
 import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
+import transition from "../../utils/transitions/transitions";
 import style from "./index.module.scss";
-export const Blog = () => {
+const Blog = () => {
   return (
     <>
       <Navbar bgColor="black" color="white" />
@@ -52,3 +53,4 @@ export const Blog = () => {
     </>
   );
 };
+export default transition(Blog);

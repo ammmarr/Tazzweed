@@ -4,7 +4,7 @@ import Product from "../product/Product.tsx";
 import Products from "../products/Products.tsx";
 import Home from "./Home";
 import Blogs from "../blogs/Blogs.tsx";
-import { Blog } from "../blog/Blog.tsx";
+import Blog from "../blog/Blog.tsx";
 
 export const mainRoutes = [
   {

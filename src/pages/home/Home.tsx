@@ -4,6 +4,7 @@ import Footer from "../../components/footer/Footer";
 import HomeHeroSection from "../../components/homeHeroSection/HomeHeroSection";
 import Navbar from "../../components/navbar/Navbar";
 import WhoWeAreSection from "../../components/whoWeAreSection/WhoWeAreSection";
+import transition from "../../utils/transitions/transitions";
 const Home = () => {
   return (
     <div className="container">
@@ -17,4 +18,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default transition(Home);

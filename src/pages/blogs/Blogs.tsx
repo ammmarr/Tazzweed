@@ -3,6 +3,7 @@ import Footer from "../../components/footer/Footer";
 import HeroBlogPost from "../../components/heroBlogPost/HeroBlogPost";
 import Navbar from "../../components/navbar/Navbar";
 import style from "./index.module.scss";
+import transition from "../../utils/transitions/transitions";
 const Blogs = () => {
   return (
     <>
@@ -30,4 +31,4 @@ const Blogs = () => {
   );
 };
 
-export default Blogs;
+export default transition(Blogs);

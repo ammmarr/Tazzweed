@@ -18,8 +18,7 @@ const Navbar = (props: NavBarProps) => {
       style={{ backgroundColor: bgColor, color: color }}
     >
       <div className={style.logo}>
-        {bgColor == "black" && <img src={logoWhite} />}
-        <img src={logoBlack} />
+        {bgColor == "black" ? <img src={logoWhite} /> : <img src={logoBlack} />}
       </div>
       <div className={style.mainLinks}>
         {mainRoutes.map((each, i) => (

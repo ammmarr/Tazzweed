@@ -5,6 +5,7 @@ import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
 import mockData from "../../mockData";
 import style from "./index.module.scss";
+import transition from "../../utils/transitions/transitions";
 interface FilterObject {
   brand: string[];
   itemGroup: string[];
@@ -96,4 +97,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default transition(Products);
