@@ -7,7 +7,6 @@
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transition: all 0.3s ease;
   margin: 1vh 0;
-  max-width: 1200px;
   outline: 1px solid rgba(0, 0, 0, 0);
 
   cursor: pointer;
@@ -39,6 +38,7 @@
       margin: 10px 0;
       text-align: start;
       font-size: 1.2rem;
+      color: var(--green);
     }
     .p {
       margin: 0 0 1% 0 !important;

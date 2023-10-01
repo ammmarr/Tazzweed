@@ -30,7 +30,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background-color: #000000;
+  background-color: var(--dark);
   .footerContent {
     width: 70%;
     display: flex;
@@ -70,7 +70,7 @@
         transition: all 0.3s ease;
 
         &:hover {
-          color: #f0c40b;
+          color: var(--green);
         }
       }
     }
@@ -87,7 +87,7 @@
         cursor: pointer;
         transition: all 0.3s ease;
         &:hover {
-          color: #f0c40b;
+          color: var(--green);
         }
       }
     }

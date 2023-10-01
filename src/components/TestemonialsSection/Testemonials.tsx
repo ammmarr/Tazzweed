@@ -7,7 +7,6 @@ import style from "./index.module.scss";
 import TestmmonialCard from "./testemonialCard/TestmmonialCard";
 const Testemonials = () => {
   const [width, height] = useWindowSize();
-  console.log(width);
   let numberofSlidesToShow = 3;
   if (width < 630) {
     numberofSlidesToShow = 1;
@@ -22,8 +21,8 @@ const Testemonials = () => {
         <Slider
           {...settings}
           dots={false}
-          //   autoplay={true}
-          //   autoplaySpeed={1000}
+          autoplay={true}
+          autoplaySpeed={2000}
           arrows={false}
           slidesToShow={numberofSlidesToShow}
           className={style.slider}

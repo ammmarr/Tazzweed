@@ -4,9 +4,6 @@ import style from "./index.module.scss";
 const WhoWeAreSection = () => {
   return (
     <div className={style.container}>
-      <div className={style.imgContainer}>
-        <img src={img} />
-      </div>
       <div className={style.textContainer}>
         <h2>Who we are</h2>
         <p>

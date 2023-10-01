@@ -11,6 +11,15 @@ body,
   padding: 0;
   font-family: "Montserrat", sans-serif;
 }
+:root {
+  --purple: #52368d;
+  --darkPurple: #3c457f;
+  --green: #f0c40b;
+  --grey: #f0f2f5;
+  --green: #25d366;
+  --beige: #efeae2;
+  --dark: #111b21;
+}
 .root {
   width: 100vw;
   -moz-box-sizing: border-box;
@@ -34,9 +43,18 @@ body,
   display: flex;
   align-items: center;
   flex-direction: column;
+  background-color: var(--beige);
 }
 h1 {
   text-align: center;
+}
+.doodleBG {
+  position: absolute;
+  left: 0;
+  height: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .button {
@@ -62,7 +80,7 @@ h1 {
     transform: scale(1.07);
     background-color: rgb(27, 27, 27);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    color: #f0c40b;
+    color: var(--green);
   }
 }
 input[type="checkbox"] {
@@ -97,7 +115,7 @@ input[type="checkbox"]::before {
   height: 0.65em;
   transform: scale(0);
   transition: 120ms transform ease-in-out;
-  box-shadow: inset 1em 1em #f0c40b;
+  box-shadow: inset 1em 1em var(--green);
 }
 
 input[type="checkbox"]:checked::before {

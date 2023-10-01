@@ -5,7 +5,9 @@ const TestmmonialCard = () => {
     <div className={style.container}>
       <div className={style.wrapper}>
         <div className={style.imageContainer}>
-          <img src={userImg} />
+          <div className={style.imageWrapper}>
+            <img src={userImg} />
+          </div>
         </div>
         <h3>Ammar</h3>
         <p>

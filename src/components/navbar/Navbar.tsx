@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import logoBlack from "../../assets/images/tazzweed_logo (1).png";
-import logoWhite from "../../assets/images/logo_white.png";
+import logoBlack from "../../assets/images/Logo_black.jfif";
+import logoWhite from "../../assets/images/Logo_white.jfif";
 
 import { mainRoutes, socialMediaLinks } from "../../pages/home/routes";
 import style from "./index.module.scss";

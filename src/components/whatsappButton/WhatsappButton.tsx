@@ -4,7 +4,7 @@ const WhatsappButton = () => {
   return (
     <button className={style.container}>
       <WhatsAppIcon />
-      <span> Begin on Whatsapp</span>
+      <span> Talk to us on Whatsapp!</span>
     </button>
   );
 };

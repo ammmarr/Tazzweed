@@ -7,7 +7,6 @@
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transition: all 0.3s ease;
   margin: 5vh 0;
-  max-width: 1200px;
   cursor: pointer;
   .imageContainer {
     flex: 0.5;
@@ -28,12 +27,12 @@
     .h3 {
       font-size: 15px;
       font-weight: 400;
-      color: rgb(102, 100, 100);
     }
     .h1 {
       font-weight: 600;
       margin: 10px 0;
       text-align: start;
+      color: var(--green);
     }
     .p {
       margin: 0 0 1% 0 !important;

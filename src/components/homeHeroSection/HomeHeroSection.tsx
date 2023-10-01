@@ -1,28 +1,24 @@
-import style from "./index.module.scss";
-import stars from "../../assets/images/5star.png";
-import background from "../../assets/images/home_bg.webp";
 import WhatsappButton from "../whatsappButton/WhatsappButton";
-
+import style from "./index.module.scss";
+import doodle from "../../assets/images/doodle.png";
 const HomeHeroSection = () => {
   return (
-    <div className="container">
-      <div className={style.heroSectionContainer}>
-        <div className={style.textContainer}>
-          <h1 className={style.mainHeading}>Your AI-powered {"\n"}</h1>
-          <h1 className={style.mainHeading} style={{ color: "#f0c40b" }}>
-            Personal Assistant
-          </h1>
-          <h4 className={style.p}>
-            For you, your Home, Pet, Car and everything else! Need a delivery,
-            purchase, home or pet service? Simply text Yanzo!
-          </h4>
-          <div>
-            {/* <div className={style.googleReviews}>
+    <div className={style.heroSectionContainer}>
+      <img src={doodle} className="doodleBG" />
+      <div className={style.textContainer}>
+        <h1 className={style.mainHeading}>AI-powered {"\n"}</h1>
+        <h1 className={style.mainHeading} style={{ color: "var(--green)" }}>
+          Procurement Assistant
+        </h1>
+        <h4 className={style.p}>
+          For you, your Business and everything else! Text Tazzweed
+        </h4>
+        <div>
+          {/* <div className={style.googleReviews}>
               <span className={style.googleReviews}>Google Reviews </span>
               <img src={stars} />
             </div> */}
-            <WhatsappButton />
-          </div>
+          <WhatsappButton />
         </div>
       </div>
     </div>

@@ -12,7 +12,7 @@
   gap: 5%;
   white-space: nowrap;
   outline: none;
-  background-color: black;
+  background-color: var(--green);
   color: white !important;
   cursor: pointer;
   border: none;
@@ -25,10 +25,10 @@
   &:hover {
     transform: scale(1.04);
     background-color: rgb(27, 27, 27);
-    color: #f0c40b !important;
+    color: var(--green) !important;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     span {
-      color: #f0c40b !important;
+      color: var(--green) !important;
     }
   }
 }
