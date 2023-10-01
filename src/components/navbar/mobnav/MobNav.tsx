@@ -10,7 +10,6 @@ const MobNav = () => {
   const handleOpenDropDown = () => {
     setDropDown((prev) => !prev);
   };
-  console.log(open);
   return (
     <div className={style.menuIconContainer}>
       <Hamburger toggled={open} toggle={setIsOpen} size={32} />
@@ -21,31 +20,14 @@ const MobNav = () => {
         }`}
       >
         {mainRoutes.map((each, i) => (
-          <>
-            <Link
-              to={each.href}
-              className={style.link}
-              key={i}
-              onClick={handleOpenDropDown}
-            >
-              {each.name}
-              {/* {each.nested && (
-                <div
-                  className={`${style.dropDownContainer} ${
-                    dropDown
-                      ? `${style.dropDownOpen}`
-                      : `${style.dropDownClosed}`
-                  } `}
-                >
-                  {each.nested.map((each, i) => (
-                    <Link className={style.dropDownLink} to={each.href}>
-                      {each.name}
-                    </Link>
-                  ))}
-                </div>
-              )} */}
-            </Link>
-          </>
+          <Link
+            to={each.href}
+            className={style.link}
+            key={i}
+            onClick={handleOpenDropDown}
+          >
+            {each.name}
+          </Link>
         ))}
       </div>
     </div>

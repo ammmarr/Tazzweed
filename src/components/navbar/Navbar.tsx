@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import logoBlack from "../../assets/images/Logo_black.jfif";
-import logoWhite from "../../assets/images/Logo_white.jfif";
+import logoBlack from "../../assets/images/logo_black.png";
+import logoWhite from "../../assets/images/logo_white.png";
 
 import { mainRoutes, socialMediaLinks } from "../../pages/home/routes";
 import style from "./index.module.scss";
@@ -22,16 +22,14 @@ const Navbar = (props: NavBarProps) => {
       </div>
       <div className={style.mainLinks}>
         {mainRoutes.map((each, i) => (
-          <>
-            <Link
-              to={each.href}
-              className={style.link}
-              style={{ color: color }}
-              key={i}
-            >
-              {each.name}
-            </Link>
-          </>
+          <Link
+            to={each.href}
+            className={style.link}
+            style={{ color: color }}
+            key={i}
+          >
+            {each.name}
+          </Link>
         ))}
       </div>
       <div className={style.socialMediaLinks}>

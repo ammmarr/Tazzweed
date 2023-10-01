@@ -22,7 +22,6 @@
       width: 95%;
       z-index: 2;
       background-color: white;
-      border: 1px solid black;
       border-radius: 10px 10px 60px 10px;
       transform: translateY(-50%);
       text-align: center;
@@ -32,6 +31,7 @@
       overflow: hidden;
       padding: 5% 3% 3% 3%;
       gap: 10%;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
       .slider {
         position: relative;
         flex: 1;

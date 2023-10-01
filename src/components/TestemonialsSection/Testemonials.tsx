@@ -11,7 +11,6 @@ const Testemonials = () => {
   if (width < 630) {
     numberofSlidesToShow = 1;
   }
-  console.log(numberofSlidesToShow);
   return (
     <div className={style.container}>
       <h2>

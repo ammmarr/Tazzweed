@@ -34,14 +34,16 @@ const Footer = () => {
         </div>
         <div className={style.footerMiddle}>
           {mainRoutes.map((link, i) => (
-            <Link to={link.href}>{link.name}</Link>
+            <Link to={link.href} key={i}>
+              {link.name}
+            </Link>
           ))}{" "}
         </div>
         <div className={style.footerLast}>
           {socialMediaLinks.map((link, i) => (
-            <a key={i} className={style.smLinks}>
-              {link.icon}{" "}
-            </a>
+            <div key={i}>
+              <a className={style.smLinks}>{link.icon} </a>
+            </div>
           ))}
         </div>
       </div>

@@ -30,7 +30,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background-color: var(--dark);
+  background-color: #000000;
   .footerContent {
     width: 70%;
     display: flex;
@@ -70,7 +70,7 @@
         transition: all 0.3s ease;
 
         &:hover {
-          color: var(--green);
+          color: #f0c40b;
         }
       }
     }
@@ -81,13 +81,16 @@
       justify-content: center;
       height: 100%;
       gap: 10%;
+      div {
+        text-align: center;
+      }
       .smLinks {
         color: #ffffff;
         width: 10%;
         cursor: pointer;
         transition: all 0.3s ease;
         &:hover {
-          color: var(--green);
+          color: #f0c40b;
         }
       }
     }
