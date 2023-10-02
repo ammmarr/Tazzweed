@@ -5,7 +5,7 @@ import HomeHeroSection from "../../components/homeHeroSection/HomeHeroSection";
 import MessageComponent from "../../components/messageComponent/MessageComponent";
 import Navbar from "../../components/navbar/Navbar";
 import WhoWeAreSection from "../../components/whoWeAreSection/WhoWeAreSection";
-import transition from "../../utils/transitions/transitions";
+import transition from "../../utils/transitions/pageTransitions/PageTransitions";
 const Home = () => {
   return (
     <div className="container">

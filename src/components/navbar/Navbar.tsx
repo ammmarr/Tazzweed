@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, redirect, useNavigate } from "react-router-dom";
 import logoBlack from "../../assets/images/logo_black.png";
 import logoWhite from "../../assets/images/logo_white.png";
+import logogreen from "../../assets/images/logo_green.png";
 
 import { mainRoutes, socialMediaLinks } from "../../pages/home/routes";
 import style from "./index.module.scss";
@@ -12,13 +13,14 @@ type NavBarProps = {
 };
 const Navbar = (props: NavBarProps) => {
   const { bgColor, color } = props;
+  const navigate = useNavigate();
   return (
     <div
       className={style.container}
       style={{ backgroundColor: bgColor, color: color }}
     >
-      <div className={style.logo}>
-        {bgColor == "black" ? <img src={logoWhite} /> : <img src={logoBlack} />}
+      <div className={style.logo} onClick={() => navigate("/")}>
+        {bgColor == "black" ? <img src={logoWhite} /> : <img src={logogreen} />}
       </div>
       <div className={style.mainLinks}>
         {mainRoutes.map((each, i) => (

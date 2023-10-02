@@ -1,5 +1,6 @@
+import Hamburger from "hamburger-react";
 import style from "./index.module.scss";
-import React, { useState, useEffect, FC } from "react";
+import { useState } from "react";
 
 interface FilterCardProps {
   products: any;
@@ -7,11 +8,17 @@ interface FilterCardProps {
 }
 function FilterCard({ products, onFilterChange }: FilterCardProps) {
   // Use state to track the selected filters
-
+  const [filterOpen, setFilterOpen] = useState(false);
   return (
     <div className={style.container}>
-      <h3>Filters</h3>
-      <div className={style.checkboxCollection}>
+      <div className={style.filterAndArrowContainer}>
+        <h3>Filters</h3>
+        <Hamburger size={16} toggled={filterOpen} toggle={setFilterOpen} />
+      </div>
+      <div
+        className={style.checkboxCollection}
+        style={filterOpen ? { maxHeight: "9999px" } : { maxHeight: "0px" }}
+      >
         <h4>Brand</h4>
         <form onChange={(e) => onFilterChange(e)}>
           <label>

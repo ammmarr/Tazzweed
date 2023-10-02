@@ -5,7 +5,7 @@ import * as yup from "yup";
 import axios from "axios";
 import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
-import transition from "../../utils/transitions/transitions";
+import transition from "../../utils/transitions/pageTransitions/PageTransitions";
 
 const Contact = () => {
   const handleSubmit = async (data: any) => {

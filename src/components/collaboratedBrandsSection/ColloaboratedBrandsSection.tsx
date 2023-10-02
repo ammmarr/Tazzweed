@@ -10,6 +10,9 @@ import meeting1 from "../../assets/images/meeting1.jpg";
 import meeting2 from "../../assets/images/meeting2.jpg";
 import meeting3 from "../../assets/images/meeting3.jpg";
 import doodle from "../../assets/images/doodle.png";
+import collabBrandsData, {
+  CollabBrandsData,
+} from "../../assets/collabBrandsData";
 const ColloaboratedBrandsSection = () => {
   const [width, height] = useWindowSize();
   let numberofSlidesToShow = 3;
@@ -49,6 +52,7 @@ const ColloaboratedBrandsSection = () => {
           </div>
         </div>
       </div>
+
       <div className={style.mainTextSection}>
         <h1>
           Trusted by <br></br>a variety of brands
@@ -61,24 +65,13 @@ const ColloaboratedBrandsSection = () => {
           slidesToShow={numberofSlidesToShow}
           className={style.collaboratedBrandSlider}
         >
-          <div className={style.sliderItemContainer}>
-            <h3>1</h3>
-          </div>
-          <div className={style.sliderItemContainer}>
-            <h3>2</h3>
-          </div>
-          <div className={style.sliderItemContainer}>
-            <h3>3</h3>
-          </div>
-          <div className={style.sliderItemContainer}>
-            <h3>4</h3>
-          </div>
-          <div className={style.sliderItemContainer}>
-            <h3>5</h3>
-          </div>
-          <div className={style.sliderItemContainer}>
-            <h3>6</h3>
-          </div>
+          {collabBrandsData.map((item: CollabBrandsData, i: number) => {
+            return (
+              <div className={style.sliderItemContainer} key={i}>
+                <img src={item.img} />
+              </div>
+            );
+          })}
         </Slider>
       </div>
     </div>

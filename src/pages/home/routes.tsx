@@ -1,4 +1,9 @@
-import { FacebookRounded, Instagram, Twitter } from "@mui/icons-material";
+import {
+  FacebookRounded,
+  Instagram,
+  LinkedIn,
+  Twitter,
+} from "@mui/icons-material";
 import Contact from "../contactUs/Contact.tsx";
 import Product from "../product/Product.tsx";
 import Products from "../products/Products.tsx";
@@ -78,5 +83,10 @@ export const socialMediaLinks = [
     name: "twitter",
     href: "twitter.com",
     icon: <Twitter />,
+  },
+  {
+    name: "LinkedIn",
+    href: "linked.com",
+    icon: <LinkedIn />,
   },
 ];

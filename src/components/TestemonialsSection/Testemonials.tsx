@@ -5,6 +5,7 @@ import useWindowSize from "../../hooks/useWindowSize";
 import settings from "../../utils/sliderSettings";
 import style from "./index.module.scss";
 import TestmmonialCard from "./testemonialCard/TestmmonialCard";
+import testmonialsData from "../../assets/testmonialsData";
 const Testemonials = () => {
   const [width, height] = useWindowSize();
   let numberofSlidesToShow = 3;
@@ -26,10 +27,9 @@ const Testemonials = () => {
           slidesToShow={numberofSlidesToShow}
           className={style.slider}
         >
-          <TestmmonialCard />
-          <TestmmonialCard />
-          <TestmmonialCard />
-          <TestmmonialCard />
+          {testmonialsData.map((item, i) => (
+            <TestmmonialCard {...item} key={i} />
+          ))}
         </Slider>
       </div>
     </div>

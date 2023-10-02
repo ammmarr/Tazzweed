@@ -1,8 +1,7 @@
-import React, { FC } from "react";
-import style from "./index.module.scss";
-import p1 from "../../assets/images/p1.jfif";
+import { FC } from "react";
 import tick from "../../assets/images/tick.png";
-interface MessageComponentProps {
+import style from "./index.module.scss";
+export interface MessageComponentProps {
   text: string;
   top: string;
   left: string;

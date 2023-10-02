@@ -2,7 +2,7 @@
 // import style from "./index.module.scss";
 // import { mainRoutes } from "../../pages/home/routes";
 // import { Link } from "react-router-dom";
-import logo from "../../assets/images/tazzweed_logo (1).png";
+import logo from "../../assets/images/logo_white.png";
 // const Footer = () => {
 //   return (
 //     <div className={style.container}>

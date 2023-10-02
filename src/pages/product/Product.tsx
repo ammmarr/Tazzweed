@@ -3,7 +3,7 @@ import BlogPostCard from "../../components/blogPostCard/BlogPostCard";
 import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
 import ProductCard from "../../components/productCard/ProductCard";
-import transition from "../../utils/transitions/transitions";
+import transition from "../../utils/transitions/pageTransitions/PageTransitions";
 import style from "./index.module.scss";
 const Home = () => {
   return (

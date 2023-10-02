@@ -3,7 +3,7 @@ import Footer from "../../components/footer/Footer";
 import HeroBlogPost from "../../components/heroBlogPost/HeroBlogPost";
 import Navbar from "../../components/navbar/Navbar";
 import style from "./index.module.scss";
-import transition from "../../utils/transitions/transitions";
+import transition from "../../utils/transitions/pageTransitions/PageTransitions";
 const Blogs = () => {
   return (
     <>

@@ -70,7 +70,7 @@
         transition: all 0.3s ease;
 
         &:hover {
-          color: #f0c40b;
+          color: var(--green);
         }
       }
     }
@@ -90,7 +90,7 @@
         cursor: pointer;
         transition: all 0.3s ease;
         &:hover {
-          color: #f0c40b;
+          color: var(--green);
         }
       }
     }

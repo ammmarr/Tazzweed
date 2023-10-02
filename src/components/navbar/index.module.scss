@@ -10,11 +10,17 @@
   background-color: var(--grey);
   z-index: 100;
   position: relative;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   .logo {
     width: 20%;
     min-width: 100px;
     display: flex;
     align-items: center;
+    cursor: pointer;
+    transition: all 0.3 ease;
+    &:hover {
+      transition: all 0.3 ease;
+    }
   }
 
   .mainLinks {
@@ -33,7 +39,7 @@
     margin: 0 20px;
     text-decoration: none;
     word-break: keep-all;
-    color: var(--dark);
+    color: var(--green);
 
     text-transform: uppercase;
     transition: all 0.2s ease-in;
@@ -42,13 +48,13 @@
     align-items: center;
     transition: all 0.3s ease-in;
     &:hover {
-      color: var(--green) !important;
+      color: var(--dark) !important;
       .dropDownContainer {
         visibility: visible;
         transform: translateY(0);
         opacity: 1;
         &:hover {
-          color: var(--green);
+          color: var(--dark);
         }
       }
     }
@@ -83,16 +89,16 @@
   .socialMediaLink {
     margin: 0 10px;
   }
-  &::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    height: 5vh;
-    background: linear-gradient(to bottom, var(--grey), rgba(0, 0, 0, 0));
-    transform: translateY(100%);
-  }
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   width: 100%;
+  //   bottom: 0;
+  //   left: 0;
+  //   height: 5vh;
+  //   background: linear-gradient(to bottom, var(--grey), rgba(0, 0, 0, 0));
+  //   transform: translateY(100%);
+  // }
 }
 @media (max-width: 750px) {
   .link {
