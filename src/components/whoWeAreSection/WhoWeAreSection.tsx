@@ -21,13 +21,11 @@ const WhoWeAreSection = () => {
       <div className={style.textContainer}>
         <h2>Who we are</h2>
         <p>
-          Yanzo is the new personal assistant of choice for thousands of users
-          across the GCC. With over a hundred 5-star reviews, we always ensure
-          you get what you want! Simply text Yanzo with your requirements and
-          sit back while we handle it all! Whether its arranging the perfect
-          day, buying an item, taking care of your pet, cleaning your home,
-          renting a car or anything else that comes to your mind, Yanzo can
-          handle it all!
+          With over a hundred 5-star reviews in very short time, Tazzweed became
+          the new procurement tool of choice for thousands of users across the
+          GCC. The role of Tazzweed as a tool in managing Enterprise supplies,
+          enhancing efficiency, ensuring regulatory compliance and aiding
+          decision-taking makes it indispensable for the success of customers.
         </p>
         <WhatsappButton />
         <MessageComponent
@@ -54,7 +52,7 @@ const WhoWeAreSection = () => {
           <MessageComponent
             text={textData[2].text}
             top="-40%"
-            left="60%"
+            left="55%"
             img={p3}
           />
         )}
@@ -69,7 +67,7 @@ const WhoWeAreSection = () => {
           <MessageComponent
             text={textData[3].text}
             top="100%"
-            left="60%"
+            left="55%"
             img={p4}
           />
         )}

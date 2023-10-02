@@ -10,10 +10,23 @@ function FilterCard({ products, onFilterChange }: FilterCardProps) {
   // Use state to track the selected filters
   const [filterOpen, setFilterOpen] = useState(false);
   return (
-    <div className={style.container}>
+    <div
+      className={`${style.container}
+      ${filterOpen ? style.open : style.closed}`}
+    >
       <div className={style.filterAndArrowContainer}>
-        <h3>Filters</h3>
-        <Hamburger size={16} toggled={filterOpen} toggle={setFilterOpen} />
+        <h3
+          style={
+            filterOpen
+              ? { fontSize: "1rem" }
+              : { fontSize: "10px", fontWeight: "500" }
+          }
+        >
+          Filters
+        </h3>
+        <div className={style.iconContainer}>
+          <Hamburger size={16} toggled={filterOpen} toggle={setFilterOpen} />
+        </div>
       </div>
       <div
         className={style.checkboxCollection}

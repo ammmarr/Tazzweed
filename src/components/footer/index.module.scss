@@ -30,7 +30,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background-color: #000000;
+  background-color: var(--dark);
   .footerContent {
     width: 70%;
     display: flex;
@@ -94,6 +94,21 @@
         }
       }
     }
+  }
+}
+.poweredBySection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  background-color: var(--dark);
+  color: white;
+  a {
+    color: white;
+  }
+  p {
+    text-align: center;
   }
 }
 @media (max-width: 600px) {

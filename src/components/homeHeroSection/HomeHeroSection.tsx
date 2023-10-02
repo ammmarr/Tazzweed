@@ -64,7 +64,7 @@ const HomeHeroSection = () => {
           <MessageComponent
             text={textData[8].text}
             top="160%"
-            left="45%"
+            left="40%"
             img={textData[8].img}
           />
         )}

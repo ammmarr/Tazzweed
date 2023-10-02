@@ -5,4 +5,24 @@
   flex-wrap: wrap;
   gap: 5%;
   justify-content: stretch;
+
+  .viewContainer {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    margin: 20px 0;
+
+    .iconBg {
+      background-color: var(--dark);
+      width: fit-content;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      border: 1px solid var(--dark);
+    }
+  }
 }

@@ -69,10 +69,10 @@
     width: 100%;
   }
 }
-@media screen and (max-width: 800px) {
+@media (max-width: 800px) {
   .textContainer {
     width: 100%;
-    margin-top: 30% !important;
+    margin-top: 40% !important;
   }
   .mainHeading {
     font-size: 40px !important;

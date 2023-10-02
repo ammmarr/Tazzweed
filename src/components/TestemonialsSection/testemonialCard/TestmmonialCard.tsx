@@ -1,5 +1,4 @@
 import { FC } from "react";
-import userImg from "../../../assets/images/userIMg.jpeg";
 import style from "./index.module.scss";
 
 interface TestmmonialCardProps {

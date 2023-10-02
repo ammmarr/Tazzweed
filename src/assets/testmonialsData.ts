@@ -1,5 +1,6 @@
 import testm1 from "./images/testmonials/testmonial1.jfif";
 import testm2 from "./images/testmonials/testmonial2.jfif";
+import testm3 from "./images/testmonials/testm3.jpeg";
 
 const testmonialsData = [
   {
@@ -7,7 +8,7 @@ const testmonialsData = [
     position: "Zor Restaurant",
     testmonial:
       "Amazing and transparent service. They come up with solutions out-of-the-box and kick the door open for a variety of resolutions.",
-    photo: testm1,
+    photo: testm3,
   },
   {
     name: "Mamdouh Khairallah",

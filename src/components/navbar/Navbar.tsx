@@ -1,7 +1,6 @@
-import { Link, redirect, useNavigate } from "react-router-dom";
-import logoBlack from "../../assets/images/logo_black.png";
-import logoWhite from "../../assets/images/logo_white.png";
+import { Link, useNavigate } from "react-router-dom";
 import logogreen from "../../assets/images/logo_green.png";
+import logoWhite from "../../assets/images/logo_white.png";
 
 import { mainRoutes, socialMediaLinks } from "../../pages/home/routes";
 import style from "./index.module.scss";

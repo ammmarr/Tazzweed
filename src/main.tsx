@@ -7,6 +7,10 @@ import "./index.scss";
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+      ></meta>
       <Routes>
         <Route path="/*" element={<App />} />
       </Routes>

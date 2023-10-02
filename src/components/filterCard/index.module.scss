@@ -5,6 +5,7 @@
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   border-radius: 10px;
   padding: 10px;
+
   .filterAndArrowContainer {
     display: flex;
     justify-content: space-between;
@@ -14,6 +15,11 @@
   h4 {
     font-weight: 600;
     margin: 20px 0;
+  }
+  .iconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   label {
@@ -31,6 +37,14 @@
   .checkboxCollection {
     overflow: hidden;
     height: fit-content;
-    transition: max-height 0.2s ease;
   }
+}
+.open {
+  width: 30% !important;
+  .iconContainer {
+    justify-content: end;
+  }
+}
+.closed {
+  width: fit-content;
 }

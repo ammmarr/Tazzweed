@@ -1,11 +1,9 @@
 import React from "react";
-import style from "./index.module.scss";
-import demo from "../../assets/images/demo1.jpg";
 import { Link } from "react-router-dom";
-import Navbar from "../navbar/Navbar";
-import Footer from "../footer/Footer";
+import demo from "../../assets/images/demo1.jpg";
+import style from "./index.module.scss";
 
-interface ProductCardProps {
+export interface ProductCardProps {
   data: any;
 }
 const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
