@@ -49,7 +49,7 @@ const MessagesWrapper = () => {
         <MessageComponent
           text={textData[8].text}
           bottom="0%"
-          left="40%"
+          right="0%"
           img={textData[8].img}
         />
       )}
