@@ -71,7 +71,7 @@ h1 {
   white-space: nowrap;
   outline: none;
   background-color: var(--dark);
-  color: white;
+  color: var(--green);
   cursor: pointer;
   border: none;
   transition: all 0.3s ease;
@@ -80,7 +80,7 @@ h1 {
     transform: scale(1.07);
     background-color: rgb(27, 27, 27);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    color: var(--green);
+    color: white;
   }
 }
 input[type="checkbox"] {

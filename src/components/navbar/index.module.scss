@@ -48,13 +48,13 @@
     align-items: center;
     transition: all 0.3s ease-in;
     &:hover {
-      color: var(--dark) !important;
+      color: white !important;
       .dropDownContainer {
         visibility: visible;
         transform: translateY(0);
         opacity: 1;
         &:hover {
-          color: var(--dark);
+          color: white;
         }
       }
     }

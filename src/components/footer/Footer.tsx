@@ -1,26 +1,4 @@
-// import React from "react";
-// import style from "./index.module.scss";
-// import { mainRoutes } from "../../pages/home/routes";
-// import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo_white.png";
-// const Footer = () => {
-//   return (
-//     <div className={style.container}>
-//       <div className={style.dividor} />
-//       <div className={style.mainLinks}>
-//         {mainRoutes.map((link) => (
-//           <Link className={style.link} to={link.href}>
-//             {link.name}
-//           </Link>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Footer;
-
-// import logo from "@images/logo-gold.png";
 import { Link } from "react-router-dom";
 import { mainRoutes, socialMediaLinks } from "../../pages/home/routes";
 import style from "./index.module.scss";
@@ -50,9 +28,20 @@ const Footer = () => {
         </div>
       </div>
       <div className={style.poweredBySection}>
+        <a href="https://amirrushdy.wixsite.com/tazzweed/terms">
+          {" "}
+          Terms of use
+        </a>
+        <Link to="/cookies"> Cookies</Link>
+        <a href="https://amirrushdy.wixsite.com/tazzweed/privacy-policy">
+          {" "}
+          Privacy Policy
+        </a>
+      </div>
+      <div className={style.poweredBySection}>
         <p>
           Powered by Jirlie Enterprise, digital business transformation solution{" "}
-          <a href="https://jirlie.com/"> jirlie.com</a>
+          <a href="https://jirlie.com/"> jirlie</a>
         </p>
       </div>
     </>

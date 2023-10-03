@@ -10,6 +10,7 @@ import Products from "../products/Products.tsx";
 import Home from "./Home";
 import Blogs from "../blogs/Blogs.tsx";
 import Blog from "../blog/Blog.tsx";
+import CookiesPage from "../cookies/CookiesPage.tsx";
 
 export const mainRoutes = [
   {
@@ -63,6 +64,11 @@ export const allRoutes = [
     name: "product",
     href: "/product/:id",
     element: <Product />,
+  },
+  {
+    name: "cookeis",
+    href: "/cookies",
+    element: <CookiesPage />,
   },
 ];
 

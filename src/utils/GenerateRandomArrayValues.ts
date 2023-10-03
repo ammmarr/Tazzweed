@@ -30,4 +30,3 @@ export default function generateUniqueRandomNumbers(
 
 // Example usage:
 const result = generateUniqueRandomNumbers(5, 3);
-console.log(result); // Example output: [2, 4, 5]
