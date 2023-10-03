@@ -5,11 +5,7 @@ import { mainRoutes } from "../../../pages/home/routes";
 import style from "./index.module.scss";
 const MobNav = () => {
   const [open, setIsOpen] = useState(false);
-  const [dropDown, setDropDown] = useState(false);
 
-  const handleOpenDropDown = () => {
-    setDropDown((prev) => !prev);
-  };
   return (
     <div className={style.menuIconContainer}>
       <Hamburger toggled={open} toggle={setIsOpen} size={32} />
@@ -20,12 +16,7 @@ const MobNav = () => {
         }`}
       >
         {mainRoutes.map((each, i) => (
-          <Link
-            to={each.href}
-            className={style.link}
-            key={i}
-            onClick={handleOpenDropDown}
-          >
+          <Link to={each.href} className={style.link} key={i}>
             {each.name}
           </Link>
         ))}
