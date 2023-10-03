@@ -10,6 +10,10 @@ const Footer = () => {
         <div className={style.footerContent}>
           <div className={style.footerFirst}>
             <img src={logo} alt="resturants Logo" />
+            <p>lsaknks s;KND;a fkAS KDJ lkasd</p>
+            <p>lsaknks s;KND;a fkAS KDJ lkasd</p>
+            <p>lsaknks s;KND;a fkAS KDJ lkasd</p>
+            <p>lsaknks s;KND;a fkAS KDJ lkasd</p>
           </div>
           <div className={style.footerMiddle}>
             {mainRoutes.map((link, i) => (
@@ -18,12 +22,16 @@ const Footer = () => {
               </Link>
             ))}{" "}
           </div>
+          {/* {% for news in category %} */}
           <div className={style.footerLast}>
-            {socialMediaLinks.map((link, i) => (
-              <div key={i}>
-                <a className={style.smLinks}>{link.icon} </a>
-              </div>
-            ))}
+            <h3>Follow Us</h3>
+            <div className={style.linksContainer}>
+              {socialMediaLinks.map((link, i) => (
+                <div key={i} className={style.smLinkContainer}>
+                  <a className={style.smLinks}>{link.icon} </a>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -40,8 +48,12 @@ const Footer = () => {
       </div>
       <div className={style.poweredBySection}>
         <p>
-          Powered by Jirlie Enterprise, digital business transformation solution{" "}
-          <a href="https://jirlie.com/"> jirlie</a>
+          {" "}
+          <a href="https://jirlie.com/">
+            {" "}
+            Powered by Jirlie Enterprise, digital business transformation
+            solution
+          </a>
         </p>
       </div>
     </>

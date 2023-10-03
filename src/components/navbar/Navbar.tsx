@@ -16,7 +16,7 @@ const Navbar = (props: NavBarProps) => {
   return (
     <div
       className={style.container}
-      style={{ backgroundColor: "#111b21", color: color }}
+      style={{ backgroundColor: bgColor, color: color }}
     >
       <div className={style.logo} onClick={() => navigate("/")}>
         {bgColor == "black" ? <img src={logoWhite} /> : <img src={logogreen} />}
