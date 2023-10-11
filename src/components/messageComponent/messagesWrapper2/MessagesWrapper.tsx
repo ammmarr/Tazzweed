@@ -18,7 +18,7 @@ const MessagesWrapper2 = () => {
 
       <MessageComponent
         text={textData[1].text}
-        top="-2%"
+        top="-5%"
         left="5%"
         img={textData[1].img}
       />
@@ -33,7 +33,7 @@ const MessagesWrapper2 = () => {
         <MessageComponent
           text={textData[2].text}
           bottom="10%"
-          right="25%"
+          right="5%"
           img={textData[2].img}
         />
       )}
@@ -48,7 +48,7 @@ const MessagesWrapper2 = () => {
         <MessageComponent
           text={textData[3].text}
           top="10%"
-          right="2%"
+          right="5%"
           img={textData[3].img}
         />
       )}
