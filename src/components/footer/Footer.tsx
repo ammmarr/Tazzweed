@@ -12,12 +12,8 @@ const Footer = () => {
             <img src={logo} alt="resturants Logo" />
             <p>
               UAE based technology startup specialized in digital procurement
-              and outsourcing;
-            </p>
-            <p>
-              {" "}
-              registered at and regulated by Dubai Economy and Tourism
-              Department since 2023, registration no. 1203830.
+              and outsourcing; registered at and regulated by Dubai Economy and
+              Tourism Department since 2023, registration no. 1203830.
             </p>
           </div>
           <div className={style.footerMiddle}>

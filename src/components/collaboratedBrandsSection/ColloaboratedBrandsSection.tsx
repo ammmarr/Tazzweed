@@ -46,7 +46,6 @@ const ColloaboratedBrandsSection = () => {
           <div className={style.textSection}>
             <h1>How it works</h1>
             <p>
-              {" "}
               Seek our services by simply starting a WhatsApp conversation with
               Tazzweed. After that, we are fingertip away.
             </p>
