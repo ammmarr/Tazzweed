@@ -1,6 +1,7 @@
 import Hamburger from "hamburger-react";
-import style from "./index.module.scss";
 import { useState } from "react";
+import getUniqueValuesForKey from "../../utils/getUniqueValuesForKey";
+import style from "./index.module.scss";
 
 interface FilterCardProps {
   products: any;
@@ -8,6 +9,9 @@ interface FilterCardProps {
 }
 function FilterCard({ products, onFilterChange }: FilterCardProps) {
   // Use state to track the selected filters
+  const brands = getUniqueValuesForKey(products, "brand");
+  const itemGroups = getUniqueValuesForKey(products, "item_group");
+
   const [filterOpen, setFilterOpen] = useState(false);
   return (
     <div
@@ -28,71 +32,43 @@ function FilterCard({ products, onFilterChange }: FilterCardProps) {
           <Hamburger size={16} toggled={filterOpen} toggle={setFilterOpen} />
         </div>
       </div>
-      <div
-        className={style.checkboxCollection}
-        style={filterOpen ? { maxHeight: "9999px" } : { maxHeight: "0px" }}
-      >
-        <h4>Brand</h4>
-        <form onChange={(e) => onFilterChange(e)}>
-          <label>
-            Adidas
-            <input
-              type="checkbox"
-              value="Adidas"
-              name="Adidas"
-              data-inputCategory="brand"
-            />
-          </label>
-          <label>
-            Nike
-            <input
-              type="checkbox"
-              value="Nike"
-              name="Nike"
-              data-inputCategory="brand"
-            />
-          </label>{" "}
-          <label>
-            Puma
-            <input
-              type="checkbox"
-              value="Puma"
-              name="Puma"
-              data-inputCategory="brand"
-            />
-          </label>
-        </form>
-        <h4>Item Group</h4>
-        <form onChange={(e) => onFilterChange(e)}>
-          <label>
-            Adidas
-            <input
-              type="checkbox"
-              value="Adidas"
-              name="Adidas"
-              data-inputCategory="itemGroup"
-            />
-          </label>
-          <label>
-            Nike
-            <input
-              type="checkbox"
-              value="Nike"
-              name="Nike"
-              data-inputCategory="itemGroup"
-            />
-          </label>{" "}
-          <label>
-            Puma
-            <input
-              type="checkbox"
-              value="Puma"
-              name="Puma"
-              data-inputCategory="itemGroup"
-            />
-          </label>
-        </form>
-      </div>
+      {brands && (
+        <div
+          className={style.checkboxCollection}
+          style={filterOpen ? { maxHeight: "9999px" } : { maxHeight: "0px" }}
+        >
+          <h4>Brand</h4>
+          <form onChange={(e) => onFilterChange(e)}>
+            {brands.map((item: any, i) => (
+              <label>
+                {item}
+                <input
+                  type="checkbox"
+                  value={item}
+                  name={item}
+                  data-inputCategory="brand"
+                  key={i}
+                />
+              </label>
+            ))}
+          </form>
+          <h4>Item Group</h4>
+          <form onChange={(e) => onFilterChange(e)}>
+            {itemGroups.map((item: any, i) => (
+              <label>
+                {item}
+                <input
+                  type="checkbox"
+                  value={item}
+                  name={item}
+                  data-inputCategory="itemGroup"
+                  key={i}
+                />
+              </label>
+            ))}
+          </form>
+        </div>
+      )}
     </div>
   );
 }

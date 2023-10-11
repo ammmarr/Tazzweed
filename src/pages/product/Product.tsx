@@ -1,3 +1,4 @@
+import productsData from "../../assets/peoductsMockData";
 import HeroProductCard from "../../components/HeroProductCard/HeroProductCard";
 import BlogPostCard from "../../components/blogPostCard/BlogPostCard";
 import Footer from "../../components/footer/Footer";
@@ -15,11 +16,9 @@ const Home = () => {
           <h3>
             Similar <span>Products</span>
           </h3>
-          <BlogPostCard />
-          <BlogPostCard />
-          <BlogPostCard />
-          <BlogPostCard />
-          <BlogPostCard />
+          {productsData.map((item, i) => (
+            <ProductCard data={item} key={i} />
+          ))}
         </div>
       </div>
       <Footer />

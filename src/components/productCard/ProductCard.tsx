@@ -11,16 +11,16 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
     <>
       <div className={style.container}>
         <div className={style.imageContainer}>
-          <img src={demo} />
+          <img src={`https://tazzweed.com${data.thumbnail}`} />
         </div>
         <div className={style.textSection}>
-          <h1 className={style.h1}>{data.brand}</h1>
+          <h1 className={style.h1}>{data.item_name}</h1>
           <p className={style.p}>{data.name}</p>
           <div className={style.buttonContainer}>
             <Link
               className="button"
               style={{ fontSize: "10px" }}
-              to={`/product/${data.id}`}
+              to={`/product/${data.item_code}`}
             >
               More details
             </Link>

@@ -10,10 +10,15 @@ const Footer = () => {
         <div className={style.footerContent}>
           <div className={style.footerFirst}>
             <img src={logo} alt="resturants Logo" />
-            <p>lsaknks s;KND;a fkAS KDJ lkasd</p>
-            <p>lsaknks s;KND;a fkAS KDJ lkasd</p>
-            <p>lsaknks s;KND;a fkAS KDJ lkasd</p>
-            <p>lsaknks s;KND;a fkAS KDJ lkasd</p>
+            <p>
+              UAE based technology startup specialized in digital procurement
+              and outsourcing;
+            </p>
+            <p>
+              {" "}
+              registered at and regulated by Dubai Economy and Tourism
+              Department since 2023, registration no. 1203830.
+            </p>
           </div>
           <div className={style.footerMiddle}>
             {mainRoutes.map((link, i) => (
@@ -55,6 +60,7 @@ const Footer = () => {
             solution
           </a>
         </p>
+        <p>© Tazzweed Procurement and Outsourcing Portal</p>
       </div>
     </>
   );

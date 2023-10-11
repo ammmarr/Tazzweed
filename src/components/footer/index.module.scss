@@ -12,12 +12,18 @@
     height: fit-content;
     height: 50%;
     font-weight: 800;
+    gap: 30px;
 
     .footerFirst {
       display: flex;
       align-items: start;
       flex-direction: column;
-      justify-content: center;
+      justify-content: start;
+      flex: 1;
+      p {
+        font-size: 12px;
+        width: 70%;
+      }
 
       img {
         width: 70%;
@@ -39,6 +45,7 @@
       flex-direction: column;
       height: 100%;
       padding: 0px 7vw;
+      flex: 1;
       border-left: 1px solid #ffffff;
       border-right: 1px solid #ffffff;
 
@@ -65,6 +72,7 @@
       height: 100%;
       gap: 30%;
       padding: 10px 0;
+      flex: 1;
 
       h3 {
         color: white;
@@ -100,6 +108,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 100%;
   padding: 20px;
   background-color: var(--dark);

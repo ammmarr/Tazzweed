@@ -41,7 +41,7 @@ const Contact = () => {
 
   return (
     <>
-      <Navbar bgColor={"black"} color="white" />
+      <Navbar />
 
       <div className={style.container}>
         <h1>
@@ -157,9 +157,9 @@ const Contact = () => {
               <button> Submit</button>
             </div>
           </form>
-          <div className={style.mapsWrapper}>
+          {/* <div className={style.mapsWrapper}>
             <Map />
-          </div>
+          </div> */}
         </div>
       </div>
       <Footer />

@@ -24,6 +24,9 @@
   .textSection {
     flex: 1;
     padding: 2% 5% 5% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     .h3 {
       font-size: 15px;
       font-weight: 400;

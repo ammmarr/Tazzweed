@@ -50,11 +50,7 @@ export const allRoutes = [
     href: "/blogs",
     element: <Blogs />,
   },
-  {
-    name: "Contact",
-    href: "/contact",
-    element: <Contact />,
-  },
+
   {
     name: "blog",
     href: "/blog/:id",
@@ -69,6 +65,11 @@ export const allRoutes = [
     name: "cookeis",
     href: "/cookies",
     element: <CookiesPage />,
+  },
+  {
+    name: "Contact",
+    href: "/contact",
+    element: <Contact />,
   },
 ];
 

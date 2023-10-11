@@ -13,6 +13,7 @@ import doodle from "../../assets/images/doodle.png";
 import collabBrandsData, {
   CollabBrandsData,
 } from "../../assets/collabBrandsData";
+import howItWorksImages from "../../assets/howItWorksData";
 const ColloaboratedBrandsSection = () => {
   const [width, height] = useWindowSize();
   let numberofSlidesToShow = 3;
@@ -26,6 +27,9 @@ const ColloaboratedBrandsSection = () => {
         <div className={style.howItWorksWrapper}>
           <div className={style.slider}>
             <Slider {...settings} className={style.testt}>
+              {howItWorksImages.map((item, i) => (
+                <img className={style.imgContainer} src={item} />
+              ))}
               <div>
                 <img className={style.imgContainer} src={meeting1} />
               </div>

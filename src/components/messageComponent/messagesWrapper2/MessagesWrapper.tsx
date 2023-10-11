@@ -5,7 +5,6 @@ const MessagesWrapper2 = () => {
   let display = false;
 
   if (window.innerWidth > 1062) display = true;
-  console.log(textData[7]);
   return (
     <div className={style.messagesWrapperContainer}>
       {display ? (
