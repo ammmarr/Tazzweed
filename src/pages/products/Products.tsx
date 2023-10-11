@@ -14,6 +14,8 @@ interface FilterObject {
 const Products = () => {
   const [listOfProducts, setListOfProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState<any[]>([]);
+  const [gridView, setGridView] = useState(true);
+
   const [filterObject, setFilterObject] = useState<FilterObject>({
     brand: [],
     itemGroup: [],
@@ -118,8 +120,13 @@ const Products = () => {
           Our Products <span>!</span>
         </h1>
         <div className={style.filterAndDisplayContainer}>
-          <FilterCard products={data} onFilterChange={handleFilterChange} />
-          <DisplayProducts data={filteredProducts} />
+          <FilterCard
+            products={data}
+            onFilterChange={handleFilterChange}
+            gridView={gridView}
+            setGridView={setGridView}
+          />
+          <DisplayProducts data={filteredProducts} gridView={gridView} />
         </div>
       </div>
       <Footer />
