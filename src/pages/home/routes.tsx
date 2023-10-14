@@ -11,6 +11,8 @@ import Home from "./Home";
 import Blogs from "../blogs/Blogs.tsx";
 import Blog from "../blog/Blog.tsx";
 import CookiesPage from "../cookies/CookiesPage.tsx";
+import Terms from "../terms of use/Terms.tsx";
+import Privacy from "../PrivacyPolicy/Privacy.tsx";
 
 export const mainRoutes = [
   {
@@ -70,6 +72,16 @@ export const allRoutes = [
     name: "Contact",
     href: "/contact",
     element: <Contact />,
+  },
+  {
+    name: "Terms Of Use",
+    href: "/terms-of-use",
+    element: <Terms />,
+  },
+  {
+    name: "Privacy and Policy",
+    href: "/privacy-policy",
+    element: <Privacy />,
   },
 ];
 

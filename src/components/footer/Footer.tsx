@@ -39,15 +39,14 @@ const Footer = () => {
         </div>
       </div>
       <div className={style.poweredBySection}>
-        <a href="https://amirrushdy.wixsite.com/tazzweed/terms">
+        {/* <a href="https://amirrushdy.wixsite.com/tazzweed/terms">
           {" "}
           Terms of use
-        </a>
+        </a> */}
+        <Link to="/terms-of-use"> Terms of use</Link>
+
         <Link to="/cookies"> Cookies</Link>
-        <a href="https://amirrushdy.wixsite.com/tazzweed/privacy-policy">
-          {" "}
-          Privacy Policy
-        </a>
+        <Link to="/privacy-policy"> Privacy Policy</Link>
       </div>
       <div className={style.poweredBySection}>
         <p>

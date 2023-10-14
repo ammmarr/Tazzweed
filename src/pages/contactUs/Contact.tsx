@@ -9,20 +9,26 @@ import transition from "../../utils/transitions/pageTransitions/PageTransitions"
 
 const Contact = () => {
   const handleSubmit = async (data: any) => {
+    console.log(data);
     try {
-      const postUrl = `https://tazzweed.com/api/method/tazzweed.api.contact?full_name=${data.name}&phone=${data.phoneNumber}&company=${data.company}&email=${data.email}&description=${data.message}
-      `;
-      await axios.post(postUrl, "data");
+      const postUrl = `https://tazzweed.com/api/method/tazzweed.api.contact`;
+      await fetch(postUrl, {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      });
     } catch (er) {
       console.log(er, "axios er");
     }
   };
   const formik = useFormik({
     initialValues: {
-      name: "",
+      full_name: "",
       email: "",
-      message: "",
-      phoneNumber: "",
+      description: "",
+      phone: "",
       company: "",
     },
     onSubmit: async (values, { resetForm }) => {
@@ -35,7 +41,7 @@ const Contact = () => {
         .min(1, "Name is too short")
         .max(20, "Name is too long"),
       email: yup.string().email(),
-      message: yup.string(),
+      description: yup.string(),
       company: yup.string(),
       phoneNumber: yup.string(),
     }),
@@ -55,9 +61,9 @@ const Contact = () => {
               <div className={style.inputContainer}>
                 <label>
                   Name{" "}
-                  {formik.errors.name && formik.touched.name ? (
+                  {formik.errors.full_name && formik.touched.full_name ? (
                     <span className={style.errorMessage}>
-                      {formik.errors.name}
+                      {formik.errors.full_name}
                     </span>
                   ) : null}
                 </label>
@@ -65,10 +71,10 @@ const Contact = () => {
                   type="text"
                   className={style.input}
                   placeholder="name"
-                  name="name"
-                  id="name"
+                  name="full_name"
+                  id="full_name"
                   onBlur={formik.handleBlur}
-                  value={formik.values.name}
+                  value={formik.values.full_name}
                   onChange={formik.handleChange}
                 />
               </div>
@@ -98,9 +104,9 @@ const Contact = () => {
               <div className={style.inputContainer}>
                 <label>
                   Phone{" "}
-                  {formik.errors.phoneNumber && formik.touched.phoneNumber ? (
+                  {formik.errors.phone && formik.touched.phone ? (
                     <span className={style.errorMessage}>
-                      {formik.errors.phoneNumber}
+                      {formik.errors.phone}
                     </span>
                   ) : null}
                 </label>
@@ -108,10 +114,10 @@ const Contact = () => {
                   type="text"
                   className={style.input}
                   placeholder="EnterYour Phone"
-                  name="phoneNumber"
-                  id="phoneNumber"
+                  name="phone"
+                  id="phone"
                   onBlur={formik.handleBlur}
-                  value={formik.values.phoneNumber}
+                  value={formik.values.phone}
                   onChange={formik.handleChange}
                 />
               </div>
@@ -140,18 +146,18 @@ const Contact = () => {
             <div className={style.textAreaWrapper}>
               <label>
                 Message{" "}
-                {formik.errors.message && formik.touched.message ? (
-                  <span className={style.errorMessage}>
-                    {formik.errors.message}
+                {formik.errors.description && formik.touched.description ? (
+                  <span className={style.errordescription}>
+                    {formik.errors.description}
                   </span>
                 ) : null}
               </label>
               <textarea
-                placeholder="Enter your message"
-                name="message"
-                id="message"
+                placeholder="Enter your description"
+                name="description"
+                id="description"
                 onBlur={formik.handleBlur}
-                value={formik.values.message}
+                value={formik.values.description}
                 onChange={formik.handleChange}
               ></textarea>
             </div>

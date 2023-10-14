@@ -7,6 +7,7 @@ import transition from "../../utils/transitions/pageTransitions/PageTransitions"
 import axios from "axios";
 import { useState, useEffect } from "react";
 import useDataFetch from "../../hooks/useGetData";
+import HeroBlogCard from "../../components/heroBlogPostt/HeroBlogCard";
 const Blogs = () => {
   // const [data, setData] = useState([]);
   // const [error, setError] = useState("");

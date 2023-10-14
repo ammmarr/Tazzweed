@@ -19,5 +19,15 @@
     gap: 5%;
     margin: 0 0 10% 0;
     flex-direction: column;
+    .noData {
+      width: 100%;
+      height: 30vh;
+      font-size: 30px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
   }
 }

@@ -1,12 +1,11 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 import DisplayProducts from "../../components/DisplayProducts/DisplayProducts";
 import FilterCard from "../../components/filterCard/FilterCard";
 import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
-import mockData from "../../mockData";
-import style from "./index.module.scss";
 import transition from "../../utils/transitions/pageTransitions/PageTransitions";
-import axios from "axios";
+import style from "./index.module.scss";
 interface FilterObject {
   brand: string[];
   itemGroup: string[];
@@ -123,6 +122,8 @@ const Products = () => {
     getDataAfterFilters();
     setLoading(false);
   }, [filterObject]);
+  console.log(filteredProducts, "filtered");
+  console.log(loading);
   return (
     <>
       <Navbar />
@@ -137,10 +138,11 @@ const Products = () => {
             gridView={gridView}
             setGridView={setGridView}
           />
-          {!loading ? (
+          {!loading && filteredProducts.length > 1 ? (
             <DisplayProducts data={filteredProducts} gridView={gridView} />
-          ) : (
-            "Loading"
+          ) : null}
+          {filteredProducts.length == 1 && (
+            <div className={style.noData}>No Data</div>
           )}
         </div>
       </div>

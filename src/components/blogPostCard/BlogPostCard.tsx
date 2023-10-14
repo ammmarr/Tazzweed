@@ -10,7 +10,7 @@ const BlogPostCard: FC<any> = ({ data }) => {
       </div>
       <div className={style.textSection}>
         <h3 className={style.h3}>{data.name}</h3>
-        <h1 className={style.h1}>{data.blog_intro}</h1>
+        {/* <h1 className={style.h1}>{data.blog_intro}</h1> */}
         <p className={style.p}>{data.meta_description}</p>
         <div className={style.buttonAndContainer}>
           <Link className="button" to={`/blog/${data.name}`}>

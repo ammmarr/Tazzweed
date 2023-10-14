@@ -1,14 +1,15 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import BlogPostCard from "../../components/blogPostCard/BlogPostCard";
 import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
+import useGetData from "../../hooks/useGetData";
 import transition from "../../utils/transitions/pageTransitions/PageTransitions";
 import style from "./index.module.scss";
-import useGetData from "../../hooks/useGetData";
 const Blog = () => {
+  const params = useParams();
+  console.log(params.id);
   const { data, loading, error } = useGetData(
-    "https://tazzweed.com/api/method/tazzweed.api.blogfilter?name=test"
+    `https://tazzweed.com/api/method/tazzweed.api.blogfilter?name=${params.id}`
   );
   const moreData = useGetData(
     "https://tazzweed.com/api/method/tazzweed.api.blog"
@@ -27,7 +28,10 @@ const Blog = () => {
           <div className={style.blog}>
             <h1>{data[0].meta_title}</h1>
 
-            <div dangerouslySetInnerHTML={{ __html: data[0].content }} />
+            <div
+              dangerouslySetInnerHTML={{ __html: data[0].content }}
+              className={style.content}
+            />
             <span>
               {data[0].read_time}{" "}
               {parseInt(data[0].read_time) > 1 ? " mins" : "min"}

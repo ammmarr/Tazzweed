@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import demo from "../../assets/images/demo1.jpg";
 import style from "./index.module.scss";
 
 export interface ProductCardProps {
@@ -15,7 +14,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
         </div>
         <div className={style.textSection}>
           <h1 className={style.h1}>{data.item_name}</h1>
-          <p className={style.p}>{data.name}</p>
+          <p className={style.p}>{data.description}</p>
           <div className={style.buttonContainer}>
             <Link
               className="button"
