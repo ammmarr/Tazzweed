@@ -10,9 +10,11 @@ import transition from "../../utils/transitions/pageTransitions/PageTransitions"
 const Contact = () => {
   const handleSubmit = async (data: any) => {
     try {
-      await axios.post("/api/private/contact", data);
+      const postUrl = `https://tazzweed.com/api/method/tazzweed.api.contact?full_name=${data.name}&phone=${data.phoneNumber}&company=${data.company}&email=${data.email}&description=${data.message}
+      `;
+      await axios.post(postUrl, "data");
     } catch (er) {
-      console.log(er);
+      console.log(er, "axios er");
     }
   };
   const formik = useFormik({
@@ -48,7 +50,7 @@ const Contact = () => {
           Send Us a Message<span className={style.contrastingColor}>!</span>
         </h1>
         <div className={style.formAndMapsWrapper}>
-          <form className={style.form}>
+          <form className={style.form} onSubmit={formik.handleSubmit}>
             <div className={style.formRow}>
               <div className={style.inputContainer}>
                 <label>

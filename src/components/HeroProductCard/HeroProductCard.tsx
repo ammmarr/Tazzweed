@@ -5,11 +5,11 @@ import WhatsappButton from "../whatsappButton/WhatsappButton";
 import style from "./index.module.scss";
 const HeroProductCard = () => {
   const params = useParams();
-  console.log(params.id);
+  console.log(params);
   const { data, loading, error } = useGetData(
-    `https://tazzweed.com/api/method/tazzweed.api.productsfilter?column_name1=item_code&value1=${params.id}`
+    `https://tazzweed.com/api/method/tazzweed.api.product_filter?name=${params.id}`
   );
-  console.log(data, "data");
+  console.log(data);
   return (
     <>
       {data[0] && (

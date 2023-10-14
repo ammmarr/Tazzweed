@@ -78,22 +78,22 @@ mainRoutes;
 export const socialMediaLinks = [
   {
     name: "Facebook",
-    href: "facebook.com",
+    href: "https://www.facebook.com/tazzweed",
     icon: <FacebookRounded />,
   },
   {
     name: "instagram",
-    href: "instagram.com",
+    href: "https://www.instagram.com/tazzweed.ai/",
     icon: <Instagram />,
   },
   {
     name: "twitter",
-    href: "twitter.com",
+    href: "https://twitter.com/tazzweedai",
     icon: <Twitter />,
   },
   {
     name: "LinkedIn",
-    href: "linked.com",
+    href: "https://www.linkedin.com/company/100752194/",
     icon: <LinkedIn />,
   },
 ];

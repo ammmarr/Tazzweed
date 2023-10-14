@@ -13,7 +13,6 @@ const Blog = () => {
   const moreData = useGetData(
     "https://tazzweed.com/api/method/tazzweed.api.blog"
   )?.data.slice(0, 4);
-  console.log(moreData, "data in Blog");
   // const { content } = data[0];
 
   const rawDate = new Date(data[0]?.creation);
@@ -29,7 +28,10 @@ const Blog = () => {
             <h1>{data[0].meta_title}</h1>
 
             <div dangerouslySetInnerHTML={{ __html: data[0].content }} />
-            <span>{data[0].read_time} mins</span>
+            <span>
+              {data[0].read_time}{" "}
+              {parseInt(data[0].read_time) > 1 ? " mins" : "min"}
+            </span>
             {/* <div dangerouslySetInnerHTML={{ __html: data.content }}></div> */}
             <span>
               Published on {year}/{month}/{day}

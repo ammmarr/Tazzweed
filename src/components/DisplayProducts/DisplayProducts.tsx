@@ -11,11 +11,9 @@ const DisplayProducts: React.FC<DisplayProductsProps> = (props) => {
   const [productsCountToView, setProductsCountToView] = useState(10);
   const { data, gridView } = props;
   const displayableData = [...data].splice(0, productsCountToView);
-  // console.log(props, "mid");
   const addMore = () => {
     setProductsCountToView((prev: number) => prev + 10);
   };
-  console.log(displayableData);
   return (
     <div className={style.container}>
       {gridView ? (

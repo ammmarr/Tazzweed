@@ -15,25 +15,26 @@ const Products = () => {
   const [listOfProducts, setListOfProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState<any[]>([]);
   const [gridView, setGridView] = useState(true);
-
+  const [loading, setLoading] = useState(false);
   const [filterObject, setFilterObject] = useState<FilterObject>({
     brand: [],
     itemGroup: [],
   });
   const brandsFilter = [...filterObject.brand].map(
-    (item: string, i) => `column_name${i}=brand&value${i}=${item}&`
+    (item: string, i) => `brand=${item}&`
   );
-  const itemGroupFilter = [...filterObject.itemGroup].map(
-    (item: string, i) =>
-      `column_name${
-        brandsFilter.length + i > 0 ? brandsFilter.length + i : i + 1
-      }=item_group&value${brandsFilter.length + i}=${item}&`
-  );
-  console.log(itemGroupFilter, "groupFilter");
+
+  const itemGroupFilter = [...filterObject.itemGroup]
+    .map(
+      (item: string, i) =>
+        `column_name${
+          brandsFilter.length + i > 0 ? brandsFilter.length + i : i + 1
+        }=item_group&value${brandsFilter.length + i}=${item}&`
+    )
+    .map((each: any) => each.replaceAll(" ", "%20"));
   // Handle filter change
 
   const handleFilterChange = (e: any) => {
-    console.log("clicked");
     const inputCategory = e.target.getAttribute("data-inputCategory");
     const checked = e.target.checked;
     const value = e.target.value;
@@ -93,24 +94,34 @@ const Products = () => {
     };
   }, []);
   useEffect(() => {
+    setLoading(true);
     let url = "https://tazzweed.com/api/method/tazzweed.api.products";
     // https://tazzweed.com/api/method/tazzweed.api.productsfilter?column_name1=brand&value1=acv
     if (filterObject.brand.length > 0 || filterObject.itemGroup.length > 0) {
-      url = `https://tazzweed.com/api/method/tazzweed.api.productsfilter?${brandsFilter.join(
-        ""
-      )}`;
+      url = `https://tazzweed.com/api/method/tazzweed.api.product_filter?${
+        filterObject.brand.length > 0
+          ? `brand=${filterObject.brand.join(", ")} `
+          : ""
+      }${
+        filterObject.itemGroup.length > 0
+          ? `&item_group=${filterObject.itemGroup.join(", ")}`
+          : ""
+      }`;
     }
 
+    console.log(url);
     async function getDataAfterFilters() {
       try {
         const { data } = await axios.get(url);
         setFilteredProducts(data.message);
+        console.log(data);
       } catch (err) {
         console.log(err);
         setError("No Resuts");
       }
     }
     getDataAfterFilters();
+    setLoading(false);
   }, [filterObject]);
   return (
     <>
@@ -126,7 +137,11 @@ const Products = () => {
             gridView={gridView}
             setGridView={setGridView}
           />
-          <DisplayProducts data={filteredProducts} gridView={gridView} />
+          {!loading ? (
+            <DisplayProducts data={filteredProducts} gridView={gridView} />
+          ) : (
+            "Loading"
+          )}
         </div>
       </div>
       <Footer />

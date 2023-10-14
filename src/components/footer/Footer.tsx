@@ -29,7 +29,9 @@ const Footer = () => {
             <div className={style.linksContainer}>
               {socialMediaLinks.map((link, i) => (
                 <div key={i} className={style.smLinkContainer}>
-                  <a className={style.smLinks}>{link.icon} </a>
+                  <a className={style.smLinks} href={link.href} target="_blank">
+                    {link.icon}{" "}
+                  </a>
                 </div>
               ))}
             </div>

@@ -40,6 +40,7 @@ const Navbar = (props: NavBarProps) => {
             className={`${style.link} ${style.socialMediaLink}`}
             style={{ color: color }}
             key={i}
+            target="_blank"
           >
             {each.icon}
           </Link>

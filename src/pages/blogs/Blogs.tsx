@@ -14,7 +14,6 @@ const Blogs = () => {
     "https://tazzweed.com/api/method/tazzweed.api.blog"
   );
 
-  console.log(data[0], "blogs");
   return (
     <>
       <Navbar />

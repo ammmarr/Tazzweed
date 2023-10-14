@@ -10,7 +10,6 @@ function useDataFetch(url: string) {
     const fetchData = async () => {
       try {
         const response = await axios.get(url);
-        console.log(response);
         setData(response.data.message);
       } catch (error: any) {
         setError(error.message); // You can customize this error handling logic

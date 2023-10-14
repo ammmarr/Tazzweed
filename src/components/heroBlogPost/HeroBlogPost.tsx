@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
-import demo from "../../assets/images/demo1.jpg";
 import style from "./index.module.scss";
 const HeroBlogPost = ({ data }: any) => {
-  console.log(data, "hero");
   return (
     <div className={style.container}>
       <div className={style.imageContainer}>

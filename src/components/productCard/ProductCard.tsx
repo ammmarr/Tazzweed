@@ -20,7 +20,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
             <Link
               className="button"
               style={{ fontSize: "10px" }}
-              to={`/product/${data.item_code}`}
+              to={`/product/${data.name}`}
             >
               More details
             </Link>
