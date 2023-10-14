@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import style from "./index.module.scss";
+import BloggerCard from "../bloggerCard/BloggerCard";
 const HeroBlogPost = ({ data }: any) => {
   console.log(typeof data.blog_intro);
   ("Jirlie's transformational impact on businesses, the creative industries, and search was widely mentioned, but so was the necessity to control and oversee this type of technology.");
@@ -10,9 +11,12 @@ const HeroBlogPost = ({ data }: any) => {
       </div>
       <div className={style.textSection}>
         <h3 className={style.h3}>Highlighted</h3>
-        <h1 className={style.h1}>{data.name}</h1>
-
+        <h1 className={style.h1}>{data.title}</h1>
+        <h4>{data.blog_category_name}</h4>
         <p>{data.blog_intro}</p>
+        <div className={style.bloggerCardContainer}>
+          <BloggerCard data={data} />
+        </div>
         <div className={style.buttonAndContainer}>
           <Link className="button" to={`/blog/${data.name}`}>
             Read More

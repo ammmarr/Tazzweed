@@ -13,6 +13,7 @@
   .imageContainer {
     width: 20%;
     height: 100%;
+    aspect-ratio: 1/1 !important;
     object-fit: contain;
     overflow: hidden;
     img {

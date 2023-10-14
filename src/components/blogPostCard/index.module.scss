@@ -8,11 +8,13 @@
   transition: all 0.3s ease;
   margin: 5vh 0;
   cursor: pointer;
+
   .imageContainer {
     width: 30%;
     height: 100%;
     object-fit: cover;
     overflow: hidden;
+    border-radius: 10px;
     img {
       object-fit: cover;
 
@@ -42,11 +44,12 @@
       overflow-wrap: break-word;
     }
     span {
-      font-size: 10px;
+      font-size: 16px;
       font-size: 600;
       color: rgb(64, 62, 62);
       color: var(--dark);
       width: fit-content;
+      margin: 0 0 20px 0;
     }
     .buttonAndContainer {
       display: flex;

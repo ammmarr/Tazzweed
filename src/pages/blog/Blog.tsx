@@ -7,15 +7,15 @@ import transition from "../../utils/transitions/pageTransitions/PageTransitions"
 import style from "./index.module.scss";
 const Blog = () => {
   const params = useParams();
-  console.log(params.id);
   const { data, loading, error } = useGetData(
     `https://tazzweed.com/api/method/tazzweed.api.blogfilter?name=${params.id}`
   );
   const moreData = useGetData(
     "https://tazzweed.com/api/method/tazzweed.api.blog"
   )?.data.slice(0, 4);
-  // const { content } = data[0];
+  console.log(data[0], "data");
 
+  // const { content } = data[0];
   const rawDate = new Date(data[0]?.creation);
   const year = rawDate.getDate();
   const month = rawDate.getMonth();
@@ -26,7 +26,7 @@ const Blog = () => {
       {data[0] ? (
         <div className={style.container}>
           <div className={style.blog}>
-            <h1>{data[0].meta_title}</h1>
+            <h1>{data[0].title}</h1>
 
             <div
               dangerouslySetInnerHTML={{ __html: data[0].content }}
@@ -37,9 +37,7 @@ const Blog = () => {
               {parseInt(data[0].read_time) > 1 ? " mins" : "min"}
             </span>
             {/* <div dangerouslySetInnerHTML={{ __html: data.content }}></div> */}
-            <span>
-              Published on {year}/{month}/{day}
-            </span>
+            <span>Published on {data[0].published_on}</span>
           </div>
           <div className={style.moreBlogsContainer}>
             <h3>

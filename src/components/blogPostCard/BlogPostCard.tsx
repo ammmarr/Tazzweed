@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
 import style from "./index.module.scss";
+import BloggerCard from "../bloggerCard/BloggerCard";
 const BlogPostCard: FC<any> = ({ data }) => {
   const blog = 1;
   return (
@@ -9,9 +10,10 @@ const BlogPostCard: FC<any> = ({ data }) => {
         <img src={data.meta_image} />
       </div>
       <div className={style.textSection}>
-        <h3 className={style.h3}>{data.name}</h3>
-        {/* <h1 className={style.h1}>{data.blog_intro}</h1> */}
+        <h1 className={style.h1}>{data.title}</h1>
+        <span>{data.blog_category_name}</span>
         <p className={style.p}>{data.meta_description}</p>
+        <BloggerCard data={data} />
         <div className={style.buttonAndContainer}>
           <Link className="button" to={`/blog/${data.name}`}>
             Read More ...
