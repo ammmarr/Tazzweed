@@ -114,6 +114,7 @@
     flex-direction: column;
     padding: 0 5%;
     z-index: 1;
+
     .collaboratedBrandSlider {
       width: 100%;
       height: 40vh;
@@ -164,6 +165,11 @@
         font-size: 20px !important;
         text-align: center;
       }
+    }
+  }
+  .mainTextSection {
+    h1 {
+      font-size: 50px;
     }
   }
   .buttonContainer {

@@ -49,7 +49,6 @@
       color: rgb(64, 62, 62);
       color: var(--dark);
       width: fit-content;
-      margin: 0 0 20px 0;
     }
     .buttonAndContainer {
       display: flex;
@@ -70,13 +69,21 @@
   .container {
     flex-direction: column;
   }
+  .textSection {
+    width: 100% !important;
+  }
   .imageContainer {
-    height: 40vh !important;
+    width: 100% !important;
+
+    height: 20vh !important;
   }
   h1 {
     font-size: 15px;
   }
   p {
     font-size: 10px;
+  }
+  span {
+    font-size: 10px !important;
   }
 }
