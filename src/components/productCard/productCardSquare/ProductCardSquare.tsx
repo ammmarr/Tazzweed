@@ -3,6 +3,15 @@ import style from "./index.module.scss";
 import { FC } from "react";
 import { ProductCardProps } from "../ProductCard";
 const ProductCardSquare: FC<ProductCardProps> = ({ data }) => {
+  let content = <p className={style.p}>{data?.description}</p>;
+  if (/<\/?[a-z][\s\S]*>/i.test(data[0]?.description)) {
+    content = (
+      <p
+        className={style.p}
+        dangerouslySetInnerHTML={{ __html: data[0]?.description }}
+      ></p>
+    );
+  }
   return (
     <div className={style.container}>
       <div className={style.imgContainer}>

@@ -48,4 +48,12 @@
       }
     }
   }
+  .infoContainer {
+    display: flex;
+    gap: 40px;
+    justify-content: end;
+    span {
+      width: fit-content;
+    }
+  }
 }

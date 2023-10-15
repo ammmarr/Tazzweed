@@ -5,6 +5,7 @@ import Navbar from "../../components/navbar/Navbar";
 import useGetData from "../../hooks/useGetData";
 import transition from "../../utils/transitions/pageTransitions/PageTransitions";
 import style from "./index.module.scss";
+import BloggerCard from "../../components/bloggerCard/BloggerCard";
 const Blog = () => {
   const params = useParams();
   const { data, loading, error } = useGetData(
@@ -22,7 +23,7 @@ const Blog = () => {
   const day = rawDate.getDay();
   return (
     <>
-      <Navbar bgColor="black" color="white" />
+      <Navbar />
       {data[0] ? (
         <div className={style.container}>
           <div className={style.blog}>
@@ -32,12 +33,17 @@ const Blog = () => {
               dangerouslySetInnerHTML={{ __html: data[0].content }}
               className={style.content}
             />
-            <span>
-              {data[0].read_time}{" "}
-              {parseInt(data[0].read_time) > 1 ? " mins" : "min"}
-            </span>
+            <div className={style.infoContainer}>
+              <span>
+                <span>Published on {data[0].published_on}</span>
+
+                {data[0].read_time}
+                {parseInt(data[0].read_time) > 1 ? " mins" : "min"}
+              </span>
+            </div>
+
             {/* <div dangerouslySetInnerHTML={{ __html: data.content }}></div> */}
-            <span>Published on {data[0].published_on}</span>
+            <BloggerCard data={data[0]} />
           </div>
           <div className={style.moreBlogsContainer}>
             <h3>

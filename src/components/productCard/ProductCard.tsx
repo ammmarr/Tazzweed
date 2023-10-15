@@ -6,6 +6,15 @@ export interface ProductCardProps {
   data: any;
 }
 const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
+  let content = <p className={style.p}>{data?.description}</p>;
+  if (/<\/?[a-z][\s\S]*>/i.test(data[0]?.description)) {
+    content = (
+      <p
+        className={style.p}
+        dangerouslySetInnerHTML={{ __html: data[0]?.description }}
+      ></p>
+    );
+  }
   return (
     <>
       <div className={style.container}>
@@ -14,7 +23,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
         </div>
         <div className={style.textSection}>
           <h1 className={style.h1}>{data.item_name}</h1>
-          <p className={style.p}>{data.description}</p>
+          {content}
           <div className={style.buttonContainer}>
             <Link
               className="button"

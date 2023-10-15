@@ -8,9 +8,7 @@ const HeroProductCard = () => {
   const { data, loading, error } = useGetData(
     `https://tazzweed.com/api/method/tazzweed.api.product_filter?name=${params.id}`
   );
-  console.log(data[0]?.description);
   var htmlRegex = new RegExp("/</?[a-z][sS]*>/i");
-  console.log();
   let content = <p className={style.p}>{data[0]?.description}</p>;
   if (/<\/?[a-z][\s\S]*>/i.test(data[0]?.description)) {
     content = (
