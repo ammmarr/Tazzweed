@@ -29,14 +29,8 @@
     .content {
       width: 100%;
       flex-wrap: wrap;
-      display: block;
-      word-break: break-all;
-      display: flex;
       align-items: center;
       justify-content: center;
-      p {
-        width: 100%;
-      }
     }
   }
   .moreBlogsContainer {

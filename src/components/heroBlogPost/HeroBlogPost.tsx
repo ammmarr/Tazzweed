@@ -18,7 +18,7 @@ const HeroBlogPost = ({ data }: any) => {
           <BloggerCard data={data} />
         </div>
         <div className={style.buttonAndContainer}>
-          <Link className="button" to={`/blog/${data.name}`}>
+          <Link className="button" to={`/article/${data.name}`}>
             Read More
           </Link>
           <span>{data.published_on}</span>

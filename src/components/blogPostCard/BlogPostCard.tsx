@@ -15,7 +15,7 @@ const BlogPostCard: FC<any> = ({ data }) => {
         <p className={style.p}>{data.meta_description}</p>
         <BloggerCard data={data} />
         <div className={style.buttonAndContainer}>
-          <Link className="button" to={`/blog/${data.name}`}>
+          <Link className="button" to={`/article/${data.name}`}>
             Read More
           </Link>
           <span>{data.published_on}</span>
