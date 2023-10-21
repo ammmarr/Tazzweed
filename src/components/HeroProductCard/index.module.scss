@@ -51,6 +51,11 @@
       width: 100%;
       margin: 3% 0 0 0;
     }
+    .groupAndBack {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
   &:hover {
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;

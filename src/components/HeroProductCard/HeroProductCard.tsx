@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import useGetData from "../../hooks/useGetData";
 import WhatsappButton from "../whatsappButton/WhatsappButton";
 import style from "./index.module.scss";
+import Back from "../back Button/Back";
 const HeroProductCard = () => {
   const params = useParams();
   console.log(params);
@@ -26,7 +27,12 @@ const HeroProductCard = () => {
             <img src={`https://tazzweed.com${data[0].thumbnail}`} />
           </div>
           <div className={style.textSection}>
-            <h3 className={style.h3}>{data[0].item_group}</h3>
+            <div className={style.groupAndBack}>
+              <h3 className={style.h3}>{data[0].item_group}</h3>
+
+              <Back />
+            </div>
+
             <h1 className={style.h1}>{data[0].item_name}</h1>
             {content}
             <p className={style.p}>{data[0]?.description}</p>

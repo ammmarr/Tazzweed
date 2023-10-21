@@ -11,7 +11,6 @@
 
   .imageContainer {
     width: 30%;
-    height: 100%;
     object-fit: cover;
     overflow: hidden;
     border-radius: 10px;
@@ -38,6 +37,12 @@
       margin: 10px 0;
       text-align: start;
       color: var(--green);
+    }
+    h4 {
+      margin-bottom: 20px;
+      &:hover {
+        text-decoration: underline;
+      }
     }
     .p {
       margin: 0 0 1% 0 !important;

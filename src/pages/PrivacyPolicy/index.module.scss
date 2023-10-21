@@ -6,11 +6,13 @@
   min-height: 100vh;
   background-color: var(--grey);
   h1 {
+    color: var(--green);
+
     margin-top: 10vh;
   }
   .textContainer {
     background-color: white;
-    max-width: 1200px;
+    max-width: 1500px;
     padding: 30px;
     border-radius: 20px;
     outline: 1px solid black;

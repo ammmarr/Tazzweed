@@ -1,13 +1,11 @@
-import React from "react";
-import Navbar from "../../components/navbar/Navbar";
-import style from "./index.module.scss";
-import useDataFetch from "../../hooks/useGetData";
 import Footer from "../../components/footer/Footer";
+import Navbar from "../../components/navbar/Navbar";
+import useDataFetch from "../../hooks/useGetData";
+import style from "./index.module.scss";
 const Terms = () => {
   const { data, loading, error } = useDataFetch(
     "https://tazzweed.com/api/method/tazzweed.api.terms"
   );
-  console.log(data[0], "datatat");
   return (
     <div className={style.container}>
       <Navbar />

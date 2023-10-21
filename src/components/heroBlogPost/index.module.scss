@@ -8,8 +8,7 @@
   transition: all 0.3s ease;
   margin: 10vh 0;
   max-width: 1500px;
-  margin: 20vh 0;
-
+  cursor: pointer;
   .imageContainer {
     flex: 1.1;
     object-fit: cover;
@@ -38,6 +37,9 @@
     }
     h4 {
       margin-bottom: 20px;
+      &:hover {
+        text-decoration: underline;
+      }
     }
     p {
       margin: 0 0 10% 0 !important;
@@ -51,9 +53,10 @@
       // white-space: pre-line !important;
     }
     span {
-      font-size: 10px;
+      font-size: 16px;
       font-size: 600;
       color: rgb(64, 62, 62);
+      color: var(--dark);
       width: fit-content;
     }
     .buttonAndContainer {
@@ -62,6 +65,11 @@
       align-items: center;
       width: 100%;
       margin: 3% 0 0 0;
+    }
+    .groupAndBack {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
   }
   &:hover {

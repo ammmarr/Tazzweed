@@ -28,9 +28,15 @@ const DisplayProducts: React.FC<DisplayProductsProps> = (props) => {
         </div>
       )}
       <div className={style.loadMoreContainer}>
-        <div className="button" onClick={addMore}>
-          Load More ...
-        </div>
+        {productsCountToView >= data.length ? (
+          <div className="button" onClick={addMore}>
+            Load More ...
+          </div>
+        ) : (
+          <h2 style={{ textAlign: "center", margin: "10vh 0" }}>
+            You are all caught up
+          </h2>
+        )}
       </div>
     </div>
   );

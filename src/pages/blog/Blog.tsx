@@ -6,6 +6,7 @@ import useGetData from "../../hooks/useGetData";
 import transition from "../../utils/transitions/pageTransitions/PageTransitions";
 import style from "./index.module.scss";
 import BloggerCard from "../../components/bloggerCard/BloggerCard";
+import Back from "../../components/back Button/Back";
 const Blog = () => {
   const params = useParams();
   const { data, loading, error } = useGetData(
@@ -14,7 +15,6 @@ const Blog = () => {
   const moreData = useGetData(
     "https://tazzweed.com/api/method/tazzweed.api.blog"
   )?.data.slice(0, 4);
-  console.log(data[0], "data");
 
   // const { content } = data[0];
   const rawDate = new Date(data[0]?.creation);
@@ -26,6 +26,9 @@ const Blog = () => {
       <Navbar />
       {data[0] ? (
         <div className={style.container}>
+          <div className={style.backButtonContainer}>
+            <Back />
+          </div>
           <div className={style.blog}>
             <h1>{data[0].title}</h1>
 

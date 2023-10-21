@@ -13,6 +13,7 @@ import Blog from "../blog/Blog.tsx";
 import CookiesPage from "../cookies/CookiesPage.tsx";
 import Terms from "../terms of use/Terms.tsx";
 import Privacy from "../PrivacyPolicy/Privacy.tsx";
+import BlogsFilter from "../blogs/blogsFilterUI/BlogsFilter.tsx";
 
 export const mainRoutes = [
   {
@@ -57,6 +58,11 @@ export const allRoutes = [
     name: "blog",
     href: "/article/:id",
     element: <Blog />,
+  },
+  {
+    name: "blog",
+    href: "/blogs/:id/:filter",
+    element: <BlogsFilter />,
   },
   {
     name: "product",

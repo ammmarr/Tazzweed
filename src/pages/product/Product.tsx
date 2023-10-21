@@ -1,5 +1,6 @@
 import productsData from "../../assets/peoductsMockData";
 import HeroProductCard from "../../components/HeroProductCard/HeroProductCard";
+import Back from "../../components/back Button/Back";
 import BlogPostCard from "../../components/blogPostCard/BlogPostCard";
 import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";

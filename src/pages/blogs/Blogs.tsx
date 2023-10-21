@@ -2,15 +2,11 @@ import BlogPostCard from "../../components/blogPostCard/BlogPostCard";
 import Footer from "../../components/footer/Footer";
 import HeroBlogPost from "../../components/heroBlogPost/HeroBlogPost";
 import Navbar from "../../components/navbar/Navbar";
-import style from "./index.module.scss";
-import transition from "../../utils/transitions/pageTransitions/PageTransitions";
-import axios from "axios";
-import { useState, useEffect } from "react";
 import useDataFetch from "../../hooks/useGetData";
-import HeroBlogCard from "../../components/heroBlogPostt/HeroBlogCard";
+import transition from "../../utils/transitions/pageTransitions/PageTransitions";
+import BlogsFilter from "./blogsFilterUI/BlogsFilter";
+import style from "./index.module.scss";
 const Blogs = () => {
-  // const [data, setData] = useState([]);
-  // const [error, setError] = useState("");
   const { data, loading, error } = useDataFetch(
     "https://tazzweed.com/api/method/tazzweed.api.blog"
   );
@@ -41,6 +37,7 @@ const Blogs = () => {
           )}
         </div>
       </div>
+      {/* <BlogsFilter /> */}
       <Footer />
     </>
   );
