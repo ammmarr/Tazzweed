@@ -7,6 +7,7 @@ const BlogPostCard: FC<any> = ({ data }) => {
   const navigate = useNavigate();
   const handleContainerClick = (e: any) => {
     e.stopPropagation();
+    navigate(`/article/${data.name}`);
   };
   return (
     <div className={style.container} onClick={(e) => handleContainerClick(e)}>
@@ -27,8 +28,8 @@ const BlogPostCard: FC<any> = ({ data }) => {
         <p className={style.p}>{data.meta_description}</p>
         <BloggerCard data={data} />
         <div className={style.buttonAndContainer}>
-          <span>{data.published_on}</span>
-          <span>Read Time: {data.read_time} mins</span>
+          <span className={style.info}>{data.published_on}</span>
+          <span className={style.info}>Read Time: {data.read_time} mins</span>
         </div>
       </div>
     </div>

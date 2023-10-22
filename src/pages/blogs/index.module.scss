@@ -5,9 +5,7 @@
   align-items: center;
   flex-direction: column;
   background-color: #fafafa;
-  span {
-    color: var(--green);
-  }
+
   h1 {
     margin: 5vh 0 0 0;
   }
@@ -22,5 +20,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    span {
+      color: var(--green);
+      font-size: 40px !important;
+    }
   }
 }

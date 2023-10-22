@@ -45,22 +45,23 @@
       }
     }
     .p {
-      margin: 0 0 1% 0 !important;
+      margin: 0 0 5% 0 !important;
       overflow-wrap: break-word;
     }
-    span {
-      font-size: 16px;
-      font-size: 600;
-      color: rgb(64, 62, 62);
-      color: var(--dark);
-      width: fit-content;
-    }
+
     .buttonAndContainer {
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 100%;
       margin: 3% 0 0 0;
+    }
+    .info {
+      font-size: 16px !important;
+      font-size: 600;
+      color: rgb(64, 62, 62);
+      color: var(--dark);
+      width: fit-content;
     }
   }
   &:hover {
@@ -88,7 +89,7 @@
   p {
     font-size: 10px;
   }
-  span {
-    font-size: 10px !important;
-  }
+  // span {
+  //   font-size: 10px !important;
+  // }
 }

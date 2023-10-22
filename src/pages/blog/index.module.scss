@@ -23,6 +23,7 @@
     margin: 0vh 0 10vh 0;
     padding: 2%;
     text-wrap: wrap;
+    flex-wrap: wrap;
     h1 {
       margin: 20px 0;
       text-align: start;
@@ -39,6 +40,18 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
+      text-wrap: wrap;
+      overflow-wrap: break-word !important;
+
+      p {
+        text-wrap: wrap;
+        overflow-wrap: break-word !important;
+        width: 100%;
+        white-space: normal;
+        img {
+          max-width: 1200px !important;
+        }
+      }
     }
   }
   .moreBlogsContainer {
@@ -46,6 +59,8 @@
     h3 {
       font-size: 30px;
       span {
+        font-size: inherit;
+
         color: var(--green);
       }
     }
