@@ -8,7 +8,7 @@ const Back = () => {
   };
   return (
     <div className={style.back} onClick={handleNavigateRefresh}>
-      <ArrowBackIosNewIcon />
+      <Ar rowBackIosNewIcon />
       Back!
     </div>
   );

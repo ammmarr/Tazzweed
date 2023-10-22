@@ -17,7 +17,7 @@ const HeroBlogPost = ({ data }: any) => {
       <div className={style.textSection}>
         <div className={style.groupAndBack}>
           <h3 className={style.h3}>Highlighted</h3>
-          <Back />
+          {/* <Back /> */}
         </div>
         <h3 className={style.h3}></h3>
         <h1 className={style.h1}>{data.title}</h1>
