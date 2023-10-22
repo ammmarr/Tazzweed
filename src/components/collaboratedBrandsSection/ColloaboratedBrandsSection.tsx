@@ -30,17 +30,6 @@ const ColloaboratedBrandsSection = () => {
               {howItWorksImages.map((item, i) => (
                 <img className={style.imgContainer} src={item} />
               ))}
-              <div>
-                <img className={style.imgContainer} src={meeting1} />
-              </div>
-              <div>
-                <img src={meeting2} className={style.imgContainer} />
-              </div>
-              <div>
-                <div>
-                  <img src={meeting3} className={style.imgContainer} />
-                </div>
-              </div>
             </Slider>
           </div>
           <div className={style.textSection}>
