@@ -53,6 +53,21 @@
         }
       }
     }
+    .buttonAndContainer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin: 3% 0 0 0;
+
+      .info {
+        font-size: 16px !important;
+        font-size: 600;
+        color: rgb(64, 62, 62);
+        color: var(--dark);
+        width: fit-content;
+      }
+    }
   }
   .moreBlogsContainer {
     width: 90%;
@@ -66,10 +81,11 @@
     }
   }
   .infoContainer {
-    display: flex;
-    gap: 40px;
-    justify-content: end;
     span {
+      display: flex;
+      gap: 40px;
+      width: 100%;
+      justify-content: space-between;
       width: fit-content;
     }
   }

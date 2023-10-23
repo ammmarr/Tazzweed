@@ -14,6 +14,7 @@ const DisplayProducts: React.FC<DisplayProductsProps> = (props) => {
   const addMore = () => {
     setProductsCountToView((prev: number) => prev + 10);
   };
+  console.log(data);
   return (
     <div className={style.container}>
       {gridView ? (
@@ -28,7 +29,7 @@ const DisplayProducts: React.FC<DisplayProductsProps> = (props) => {
         </div>
       )}
       <div className={style.loadMoreContainer}>
-        {productsCountToView >= data.length ? (
+        {productsCountToView <= data.length ? (
           <div className="button" onClick={addMore}>
             Load More ...
           </div>

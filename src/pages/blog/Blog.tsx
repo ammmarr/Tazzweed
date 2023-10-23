@@ -36,12 +36,11 @@ const Blog = () => {
               dangerouslySetInnerHTML={{ __html: data[0].content }}
               className={style.content}
             />
-            <div className={style.infoContainer}>
-              <span>
-                <span>Published on {data[0].published_on}</span>
-
-                {data[0].read_time}
-                {parseInt(data[0].read_time) > 1 ? " mins" : "min"}
+            <div className={style.buttonAndContainer}>
+              <span className={style.info}>{data[0].published_on}</span>
+              <span className={style.info}>
+                Read Time: {data[0].read_time}{" "}
+                {parseInt(data[0].read_time) > 2 ? "mins" : "min"}
               </span>
             </div>
 

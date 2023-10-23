@@ -29,7 +29,10 @@ const BlogPostCard: FC<any> = ({ data }) => {
         <BloggerCard data={data} />
         <div className={style.buttonAndContainer}>
           <span className={style.info}>{data.published_on}</span>
-          <span className={style.info}>Read Time: {data.read_time} mins</span>
+          <span className={style.info}>
+            Read Time: {data.read_time}{" "}
+            {parseInt(data.read_time) > 2 ? "mins" : "min"}
+          </span>
         </div>
       </div>
     </div>

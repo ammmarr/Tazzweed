@@ -123,7 +123,6 @@ const Products = () => {
     setLoading(false);
   }, [filterObject]);
   console.log(filteredProducts, "filtered");
-  console.log(loading);
   return (
     <>
       <Navbar />
