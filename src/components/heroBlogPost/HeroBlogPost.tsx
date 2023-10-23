@@ -39,7 +39,11 @@ const HeroBlogPost = ({ data }: any) => {
             Read More
           </Link> */}
           <span>{data.published_on}</span>
-          <span>Read Time: {data.read_time} mins</span>
+          <span>
+            {" "}
+            Read Time: {data.read_time}{" "}
+            {parseInt(data.read_time) > 2 ? "mins" : "min"}
+          </span>
         </div>
       </div>
     </div>
