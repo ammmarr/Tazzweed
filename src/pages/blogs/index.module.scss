@@ -20,7 +20,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    span {
+    .highlighted {
       color: var(--green);
       font-size: 40px !important;
     }

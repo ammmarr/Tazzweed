@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import style from "./index.module.scss";
 import BloggerCard from "../bloggerCard/BloggerCard";
 import Back from "../back Button/Back";
+import { BlogTimeInfo } from "../blogtimeInfo/BlogTimeInfo";
 const HeroBlogPost = ({ data }: any) => {
   ("Jirlie's transformational impact on businesses, the creative industries, and search was widely mentioned, but so was the necessity to control and oversee this type of technology.");
   const navigate = useNavigate();
@@ -34,17 +35,10 @@ const HeroBlogPost = ({ data }: any) => {
         <div className={style.bloggerCardContainer}>
           <BloggerCard data={data} />
         </div>
-        <div className={style.buttonAndContainer}>
-          {/* <Link className="button" to={`/article/${data.name}`}>
-            Read More
-          </Link> */}
-          <span>{data.published_on}</span>
-          <span>
-            {" "}
-            Read Time: {data.read_time}{" "}
-            {parseInt(data.read_time) > 2 ? "mins" : "min"}
-          </span>
-        </div>
+        <BlogTimeInfo
+          published_on={data.published_on}
+          read_time={data.read_time}
+        />
       </div>
     </div>
   );

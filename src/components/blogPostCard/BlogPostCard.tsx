@@ -2,6 +2,7 @@ import { FC, MouseEvent } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import style from "./index.module.scss";
 import BloggerCard from "../bloggerCard/BloggerCard";
+import { BlogTimeInfo } from "../blogtimeInfo/BlogTimeInfo";
 const BlogPostCard: FC<any> = ({ data }) => {
   const blog = 1;
   const navigate = useNavigate();
@@ -27,13 +28,10 @@ const BlogPostCard: FC<any> = ({ data }) => {
         </h4>
         <p className={style.p}>{data.meta_description}</p>
         <BloggerCard data={data} />
-        <div className={style.buttonAndContainer}>
-          <span className={style.info}>{data.published_on}</span>
-          <span className={style.info}>
-            Read Time: {data.read_time}{" "}
-            {parseInt(data.read_time) > 2 ? "mins" : "min"}
-          </span>
-        </div>
+        <BlogTimeInfo
+          read_time={data.read_time}
+          published_on={data.published_on}
+        />
       </div>
     </div>
   );

@@ -7,6 +7,7 @@ import transition from "../../utils/transitions/pageTransitions/PageTransitions"
 import style from "./index.module.scss";
 import BloggerCard from "../../components/bloggerCard/BloggerCard";
 import Back from "../../components/back Button/Back";
+import { BlogTimeInfo } from "../../components/blogtimeInfo/BlogTimeInfo";
 const Blog = () => {
   const params = useParams();
   const { data, loading, error } = useGetData(
@@ -36,12 +37,11 @@ const Blog = () => {
               dangerouslySetInnerHTML={{ __html: data[0].content }}
               className={style.content}
             />
-            <div className={style.buttonAndContainer}>
-              <span className={style.info}>{data[0].published_on}</span>
-              <span className={style.info}>
-                Read Time: {data[0].read_time}{" "}
-                {parseInt(data[0].read_time) > 2 ? "mins" : "min"}
-              </span>
+            <div className={style.blogTimeInfoMargin}>
+              <BlogTimeInfo
+                published_on={data[0].published_on}
+                read_time={data[0].read_time}
+              />
             </div>
 
             {/* <div dangerouslySetInnerHTML={{ __html: data.content }}></div> */}

@@ -22,7 +22,8 @@ const Blogs = () => {
         {data[0] && <HeroBlogPost data={data[0]} />}
         <div className={style.postsContainer}>
           <h2>
-            Have A quick view of our latest<span> Posts !</span>
+            Have A quick view of our latest
+            <span className={style.highlighted}> Posts !</span>
           </h2>
           {data && (
             <>

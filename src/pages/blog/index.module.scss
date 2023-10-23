@@ -29,12 +29,7 @@
       text-align: start;
       color: var(--green);
     }
-    span {
-      color: grey;
-      text-align: end;
-      display: block;
-      margin: 30px 0;
-    }
+
     .content {
       width: 100%;
       flex-wrap: wrap;
@@ -67,6 +62,9 @@
         color: var(--dark);
         width: fit-content;
       }
+    }
+    .blogTimeInfoMargin {
+      margin: 5% 0;
     }
   }
   .moreBlogsContainer {
