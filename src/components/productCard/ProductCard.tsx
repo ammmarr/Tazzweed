@@ -7,11 +7,11 @@ export interface ProductCardProps {
 }
 const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
   let content = <p className={style.p}>{data?.description}</p>;
-  if (/<\/?[a-z][\s\S]*>/i.test(data[0]?.description)) {
+  if (/<\/?[a-z][\s\S]*>/i.test(data?.description)) {
     content = (
       <p
         className={style.p}
-        dangerouslySetInnerHTML={{ __html: data[0]?.description }}
+        dangerouslySetInnerHTML={{ __html: data?.description }}
       ></p>
     );
   }

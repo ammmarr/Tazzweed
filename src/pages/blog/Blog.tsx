@@ -18,10 +18,7 @@ const Blog = () => {
   )?.data.slice(0, 4);
 
   // const { content } = data[0];
-  const rawDate = new Date(data[0]?.creation);
-  const year = rawDate.getDate();
-  const month = rawDate.getMonth();
-  const day = rawDate.getDay();
+  console.log(data);
   return (
     <>
       <Navbar />
@@ -44,7 +41,6 @@ const Blog = () => {
               />
             </div>
 
-            {/* <div dangerouslySetInnerHTML={{ __html: data.content }}></div> */}
             <BloggerCard data={data[0]} />
           </div>
           <div className={style.moreBlogsContainer}>
@@ -56,7 +52,38 @@ const Blog = () => {
             ))}
           </div>
         </div>
-      ) : null}
+      ) : (
+        "loading"
+      )}
+      {/* <div className={style.container}>
+        <div className={style.backButtonContainer}>
+          <Back />
+        </div>
+        <div className={style.blog}>
+          <h1>{data[0].title}</h1>
+
+          <div
+            dangerouslySetInnerHTML={{ __html: data[0].content }}
+            className={style.content}
+          />
+          <div className={style.blogTimeInfoMargin}>
+            <BlogTimeInfo
+              published_on={data[0].published_on}
+              read_time={data[0].read_time}
+            />
+          </div>
+
+          <BloggerCard data={data[0]} />
+        </div>
+        <div className={style.moreBlogsContainer}>
+          <h3>
+            More <span>Blogs!</span>
+          </h3>
+          {moreData?.map((item: any, i: number) => (
+            <BlogPostCard data={item} key={i} />
+          ))}
+        </div>
+      </div> */}
 
       <Footer />
     </>

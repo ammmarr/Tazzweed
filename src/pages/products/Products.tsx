@@ -79,7 +79,7 @@ const Products = () => {
       const url = "https://tazzweed.com/api/method/tazzweed.api.products";
       try {
         const { data } = await axios.get(url);
-        setData(data.message);
+        setData(data.message.data);
         setFilteredProducts(data.message);
       } catch (err) {
         console.log(err);
@@ -107,13 +107,12 @@ const Products = () => {
           : ""
       }`;
     }
-
-    console.log(url);
+    console.log(filteredProducts);
     async function getDataAfterFilters() {
       try {
         const { data } = await axios.get(url);
-        setFilteredProducts(data.message);
-        console.log(data);
+        setFilteredProducts(data.message.data);
+        console.log(data.message.data, "data from call");
       } catch (err) {
         console.log(err);
         setError("No Resuts");
@@ -122,7 +121,8 @@ const Products = () => {
     getDataAfterFilters();
     setLoading(false);
   }, [filterObject]);
-  console.log(filteredProducts, "filtered");
+  // console.log(filteredProducts, "filtered");
+  console.log(data, "datatatta");
   return (
     <>
       <Navbar />
@@ -138,7 +138,11 @@ const Products = () => {
             setGridView={setGridView}
           />
           {!loading && filteredProducts.length > 1 ? (
-            <DisplayProducts data={filteredProducts} gridView={gridView} />
+            <DisplayProducts
+              data={filteredProducts}
+              gridView={gridView}
+              displayCount={10}
+            />
           ) : null}
           {filteredProducts.length == 1 && (
             <div className={style.noData}>No Data</div>

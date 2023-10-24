@@ -4,6 +4,7 @@ import getUniqueValuesForKey from "../../utils/getUniqueValuesForKey";
 import style from "./index.module.scss";
 import GridViewIcon from "@mui/icons-material/GridView";
 import ListIcon from "@mui/icons-material/List";
+import productsData from "../../assets/peoductsMockData";
 interface FilterCardProps {
   products: any;
   onFilterChange: Function;
@@ -19,7 +20,6 @@ function FilterCard({
   // Use state to track the selected filters
   const brands = getUniqueValuesForKey(products, "brand");
   const itemGroups = getUniqueValuesForKey(products, "item_group");
-
   const [filterOpen, setFilterOpen] = useState(false);
   return (
     <div className={style.fullFilterContainer}>
@@ -37,7 +37,7 @@ function FilterCard({
               <h4>Brand</h4>
               <form onChange={(e) => onFilterChange(e)}>
                 {brands.map((item: any, i) => (
-                  <label>
+                  <label key={i}>
                     {item}
                     <input
                       type="checkbox"
@@ -52,7 +52,7 @@ function FilterCard({
               <h4>Item Group</h4>
               <form onChange={(e) => onFilterChange(e)}>
                 {itemGroups.map((item: any, i) => (
-                  <label>
+                  <label key={i}>
                     {item}
                     <input
                       type="checkbox"

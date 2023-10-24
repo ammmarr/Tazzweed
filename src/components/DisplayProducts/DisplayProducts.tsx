@@ -5,16 +5,16 @@ import ProductCardSquare from "../productCard/productCardSquare/ProductCardSquar
 
 interface DisplayProductsProps {
   data: any;
-  gridView: any;
+  gridView?: any;
+  displayCount: number;
 }
 const DisplayProducts: React.FC<DisplayProductsProps> = (props) => {
-  const [productsCountToView, setProductsCountToView] = useState(10);
-  const { data, gridView } = props;
+  const { data, gridView, displayCount } = props;
+  const [productsCountToView, setProductsCountToView] = useState(displayCount);
   const displayableData = [...data].splice(0, productsCountToView);
   const addMore = () => {
-    setProductsCountToView((prev: number) => prev + 10);
+    setProductsCountToView((prev: number) => prev + displayCount);
   };
-  console.log(data);
   return (
     <div className={style.container}>
       {gridView ? (
