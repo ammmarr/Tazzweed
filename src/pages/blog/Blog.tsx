@@ -8,6 +8,7 @@ import style from "./index.module.scss";
 import BloggerCard from "../../components/bloggerCard/BloggerCard";
 import Back from "../../components/back Button/Back";
 import { BlogTimeInfo } from "../../components/blogtimeInfo/BlogTimeInfo";
+import getDateInCostumeFormat from "../../utils/getDateInCustomFormat";
 const Blog = () => {
   const params = useParams();
   const { data, loading, error } = useGetData(
@@ -18,7 +19,9 @@ const Blog = () => {
   )?.data.slice(0, 4);
 
   // const { content } = data[0];
-  console.log(data);
+
+  const date = getDateInCostumeFormat(data[0]?.published_on);
+  console.log(date, "date");
   return (
     <>
       <Navbar />
@@ -29,19 +32,27 @@ const Blog = () => {
           </div>
           <div className={style.blog}>
             <h1>{data[0].title}</h1>
-
+            <h2>{data[0].blog_intro}</h2>
+            <span className={style.topInfo}>
+              {date} , {data[0].read_time}{" "}
+              {parseInt(data[0].read_time) > 2 ? "mins" : "min"}
+            </span>
+            <div className={style.separatorContainer}>
+              <div className={style.separator}></div>
+            </div>
             <div
               dangerouslySetInnerHTML={{ __html: data[0].content }}
               className={style.content}
             />
+            <div className={style.bloggerCardContainer}>
+              <BloggerCard data={data[0]} />
+            </div>
             <div className={style.blogTimeInfoMargin}>
               <BlogTimeInfo
                 published_on={data[0].published_on}
                 read_time={data[0].read_time}
               />
             </div>
-
-            <BloggerCard data={data[0]} />
           </div>
           <div className={style.moreBlogsContainer}>
             <h3>
